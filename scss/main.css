@@ -133,14 +133,14 @@ header h4 {
   margin-top: 5%;
   text-align: right;
   color: none;
-  background: linear-gradient(270.2deg, #7EC9F5 9.69%, #3957ED 81.09%);
+  background: linear-gradient(270.2deg, #00a1ff 9.69%, #3957ED 81.09%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
   font-size: 64px;
 }
 #aboutMe h5 {
-  color: #A5AFB6;
+  color: #374249;
   text-align: end;
 }
 #aboutMe p {
@@ -178,6 +178,11 @@ html {
 .darkSite {
   background-color: #252C4F;
   transition: 0.2s ease-in-out;
+  color: #f6f6f6;
+}
+
+.lightText {
+  color: #f6f6f6;
 }
 
 .toDark {
@@ -289,12 +294,29 @@ nav li .lightMode .switch {
 }
 
 .heroBg {
-  width: 100%;
+  width: 90%;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(9px 9px 49px #7EC9F5);
 }
 
+.animationRotate {
+  -webkit-animation: spin 10s ease-in-out infinite;
+          animation: spin 10s ease-in-out infinite;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .phone {
   position: absolute;
-  transform: translate(50%, -100%);
+  transform: translate(50%, -90%);
   max-width: 50%;
   display: block;
   margin: auto;
@@ -362,7 +384,7 @@ nav li .lightMode .switch {
 }
 
 .logoLight {
-  filter: invert(80%) brightness(150%) contrast(119%) hue-rotate(207deg);
+  filter: invert(100%) brightness(110%) contrast(120%) hue-rotate(200deg);
 }
 
 .card {
@@ -372,10 +394,69 @@ nav li .lightMode .switch {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #FFFFFF;
   box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
-  -webkit-backdrop-filter: blur(29px);
-          backdrop-filter: blur(29px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 30px;
+  padding: 5%;
+}
+.card .imageContainer {
+  position: relative;
+}
+.card .imageContainer img {
+  border-radius: 30px;
+  width: 100%;
+}
+.card .imageContainer .overlay {
+  position: absolute;
+  background: linear-gradient(145.12deg, #0000FF -25.39%, #29ABE2 73.16%);
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 30px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+.card span {
+  font-family: "Montserrat", sans-serif;
+  color: #3957ED;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+.card h5 {
+  color: #374249;
+}
+.card p {
+  color: #374249;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  margin: 2% 0 4% 0;
+}
+.categories li {
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: medium;
+  font-size: 1.5em;
+  color: #374249;
+  padding: 10px 20px;
+}
+.categories .active,
+.categories :hover {
+  background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+  padding: 10px 20px;
+  font-weight: 700;
+  color: white;
+  transition: 0.25s;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
 }
 
 /* ----------------SPACING---------------- */

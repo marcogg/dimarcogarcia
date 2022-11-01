@@ -23,6 +23,38 @@ const switchColors = (e) => {
 toggleContainer.addEventListener("click", switchColors)
 
 
+// Projects navigations
+const navProjects = document.querySelector('.categories')
+const categories = navProjects.querySelectorAll('li')
+
+for (let cat = 0; cat < categories.length; cat++) {
+    categories[cat].addEventListener("click", function() {
+        // REMOVING DEFAULT CATEGORY
+        categories[0].classList.remove('active')
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        this.className += "active";
+    })
+}
+
+
+
+
+
+// for (let cat = 0; cat < categories.length; cat++) {
+//     if (e.target !== null) {
+//         e.currentTarget.classList.add('active')
+//     }
+
+// }
+
+
+// if (document.querySelector('#navList a.active') !== null) {
+//     document.querySelector('#navList a.active').classList.remove('active');
+// }
+// e.target.className = "active";
+
+
 
 
 

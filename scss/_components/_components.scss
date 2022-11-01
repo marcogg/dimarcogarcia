@@ -6,6 +6,11 @@ html {
 .darkSite {
     background-color: $darkMode;
     transition: 0.2s ease-in-out;
+    color: $base;
+}
+
+.lightText {
+    color: $base;
 }
 
 .toDark {
@@ -111,12 +116,38 @@ nav {
 }
 
 .heroBg {
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(9px 9px 49px #7EC9F5);
+}
+
+.animationRotate {
+    animation: spin 10s ease-in-out infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .phone {
     position: absolute;
-    transform: translate(50%, -100%);
+    transform: translate(50%, -90%);
     max-width: 50%;
     display: block;
     margin: auto;
@@ -187,7 +218,7 @@ nav {
 }
 
 .logoLight {
-    filter: invert(80%) brightness(150%) contrast(119%) hue-rotate(207deg)
+    filter: invert(100%) brightness(110%) contrast(120%) hue-rotate(200deg)
 }
 
 .card {
@@ -197,7 +228,67 @@ nav {
     background: rgba(255, 255, 255, 0.3);
     border: 2px solid #FFFFFF;
     box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
-    backdrop-filter: blur(29px);
+    // backdrop-filter: blur(29px);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 30px;
+    padding: 5%;
+    & .imageContainer {
+        position: relative;
+        & img {
+            border-radius: 30px;
+            width: 100%;
+        }
+        & .overlay {
+            position: absolute;
+            background: linear-gradient(145.12deg, #0000FF -25.39%, #29ABE2 73.16%);
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            border-radius: 30px;
+            mix-blend-mode: overlay;
+            opacity: 0.5;
+        }
+    }
+    & span {
+        font-family: $mainFont;
+        color: $secondary;
+        font-weight: lighter;
+        font-size: 1.5rem;
+    }
+    & h5 {
+        color: $highContrast;
+    }
+    & p {
+        color: $highContrast;
+    }
+}
+
+.categories {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-inline-start: 0;
+    margin: 2% 0 4% 0;
+    & li {
+        list-style-type: none;
+        font-family: $mainFont;
+        font-weight: medium;
+        font-size: 1.5em;
+        color: $highContrast;
+        padding: 10px 20px;
+    }
+    & .active,
+     :hover {
+        background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+        padding: 10px 20px;
+        font-weight: 700;
+        color: white;
+        transition: 0.25s;
+        border-radius: 30px;
+        transition: 0.3s ease-in-out;
+    }
 }

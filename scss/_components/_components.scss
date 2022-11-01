@@ -1,3 +1,19 @@
+html {
+    background-color: #daf9ff;
+    transition: 0.2s ease-in-out;
+}
+
+.darkSite {
+    background-color: $darkMode;
+    transition: 0.2s ease-in-out;
+}
+
+.toDark {
+    position: relative;
+    left: 35px;
+    transition: 0.2s ease-in-out;
+}
+
 body {
     background-image: url(../../img/blurredBg.svg);
     background-size: cover;
@@ -48,17 +64,62 @@ nav {
             color: $secondary;
             font-weight: 900;
         }
+        & .darkMode {
+            display: flex;
+            position: relative;
+            width: 60px;
+            background-color: $darkMode;
+            height: 30px;
+            border-radius: 30px;
+            border: solid 2px $secondary;
+            align-items: center;
+            transition: 0.4s;
+            & .switch {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $primary;
+                align-items: center;
+                transition: 0.2s ease-in-out;
+            }
+        }
+        & .lightMode {
+            display: flex;
+            position: relative;
+            width: 60px;
+            background-color: $primary;
+            height: 30px;
+            border-radius: 30px;
+            border: solid 2px $base;
+            align-items: center;
+            transition: 0.4s;
+            & .switch {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $secondary;
+                align-items: center;
+                transition: 0.2s ease-in-out;
+            }
+        }
     }
 }
 
 .containerHero {
     position: relative;
+    width: 100%;
+}
+
+.heroBg {
+    width: 100%;
 }
 
 .phone {
     position: absolute;
-    top: 20px;
-    left: 130px;
+    transform: translate(50%, -100%);
+    max-width: 50%;
+    display: block;
+    margin: auto;
 }
 
 .arrow {
@@ -94,33 +155,49 @@ nav {
     }
     &.design {
         background-color: $primary;
-        text-shadow: 5px 3px 0 $secondary;
+        text-shadow: 5px 3px 0 $primary;
         & h2 {
-            font-size: 2.5em;
+            font-size: 3em;
         }
     }
     &.mkt {
         background-color: $secondary;
         & h2 {
-            font-size: 1.6em;
-            text-shadow: 5px 3px 0 $highContrast;
+            font-size: 2em;
+            text-shadow: 5px 3px 0 $secondary;
         }
     }
     &.webDev {
         background-color: $highContrast;
         & h2 {
-            font-size: 1.5em;
-            text-shadow: 5px 3px 0 $secondary;
+            font-size: 2em;
+            text-shadow: 5px 3px 0 $highContrast;
         }
     }
     &.userEx {
         background-color: $lowContrast;
         & h2 {
             font-size: 2em;
-            text-shadow: 5px 3px 0 $primary;
+            text-shadow: 5px 3px 0 $lowContrast;
         }
     }
     // &.creativity {
     //     background-color: $secondary;
     // }
+}
+
+.logoLight {
+    filter: invert(80%) brightness(150%) contrast(119%) hue-rotate(207deg)
+}
+
+.card {
+    width: 100%;
+    border-radius: 30px;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
+    backdrop-filter: blur(29px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 30px;
 }

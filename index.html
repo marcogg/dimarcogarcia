@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Dimarcogarcia.com</title>
     <link rel="stylesheet" href="scss/main.css">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.2.3/dist/css/glide.core.min.css">
 </head>
 
 <body>
@@ -14,10 +16,15 @@
         <section>
             <nav class="col-12">
                 <ul>
-                    <li class="active">Acerca de mi</li>
-                    <li>Proyectos</li>
-                    <li>Habilidades</li>
-                    <li>Contáctame</li>
+                    <li class="active">About me</li>
+                    <li>Projects</li>
+                    <li>Skills</li>
+                    <li>Contact</li>
+                    <li id="toggleContainer">
+                        <div class="darkMode" id="toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -31,7 +38,7 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="containerHero">
-                            <img src="./img/circle.png" class="img-responsive heroBg">
+                            <img src="./img/circle.png" class="heroBg">
                             <img src="./img/phone.png" class="phone" </div>
                         </div>
                     </div>
@@ -69,7 +76,7 @@
         <section id="services">
             <div class="container">
                 <div class="row mt-3 w-100">
-                    <div class="col-12">
+                    <div class="col-12 col-md-6 col-lg-6">
                         <h2 class="title text-left">Services</h2>
                     </div>
                 </div>
@@ -100,13 +107,121 @@
         <section>
             <div class="container">
                 <div class="row w-100 mt-5">
-                    <h2 class="light blue text-left">Clients I have helped</h2>
+                    <h2 class="light blue text-left">Some clients I have helped</h2>
                 </div>
             </div>
+            <div class="container">
+                <div class="row w-100 mt-5">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients.svg" class="w-100 logoLight">
 
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-02.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-03.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-04.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-05.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-06.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-07.svg" class="w-100 logoLight">
+
+                                </li>
+                                <li class="glide__slide">
+                                    <img src="./img/clients/clients-08.svg" class="w-100 logoLight">
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- PROJECTS -->
+        <section>
+            <div class="container">
+                <div class="row w-100">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <h2 class="title text-left">Projects</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="project card">
+                            <div class="image">
+                                <img src="${image}" class="w-100">
+                            </div>
+                            <div class="meta">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h5>${projectName}</h5>
+                                        <p>${client}</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <button onclick="" class="btn">More info</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
+    <!-- Projects  -->
+    <script src="./js/projects.js"></script>
+    <script src="./js/functions.js"></script>
+    <!-- Glide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        new Glide('.glide', {
+            autoplay: 4000,
+            perView: 4,
+            gap: 50,
+            breakpoints: {
+                1024: {
+                    perView: 2,
+                    gap: 10
+                },
+                380: {
+                    perView: 1,
+                    gap: 0
+                },
+                380: {
+                    perView: 1,
+                    gap: 0
+                }
+            }
+        }).mount()
+    </script>
 </body>
 
 </html>

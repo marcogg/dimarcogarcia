@@ -167,12 +167,15 @@ header {
 }
 
 .title {
-    background: linear-gradient(270.2deg, #7EC9F5 9.69%, #3957ED 81.09%);
+    background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
     text-transform: uppercase;
     font-size: 64px;
+    &.right {
+        background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
+    }
 }
 
 .light {

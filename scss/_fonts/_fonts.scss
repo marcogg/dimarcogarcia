@@ -149,18 +149,16 @@ header {
         margin-top: 5%;
         text-align: right;
         color: none;
-        background: linear-gradient(270.2deg, #00a1ff 9.69%, #3957ED 81.09%);
+        background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 400;
         font-size: 64px;
     }
     & h5 {
-        color: $highContrast;
         text-align: end;
     }
     & p {
-        color: $highContrast;
         font-size: 24px;
         text-align: right;
     }
@@ -179,7 +177,7 @@ header {
 }
 
 .light {
-    font-weight: 700;
+    // font-weight: 700;
     font-size: 2em;
 }
 

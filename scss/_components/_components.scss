@@ -10,7 +10,13 @@ html {
 }
 
 .lightText {
-    color: $base;
+    color: $lightText;
+    transition: 0.3s ease-in-out
+}
+
+.darkText {
+    color: $highContrast;
+    transition: 0.3s ease-in-out
 }
 
 .toDark {
@@ -58,7 +64,7 @@ nav {
         text-transform: uppercase;
         font-weight: 400;
         font-size: 20px;
-        color: $highContrast;
+        // color: $highContrast;
         &:hover {
             transition: 0.2s;
             color: $secondary;
@@ -278,7 +284,6 @@ nav {
         font-family: $mainFont;
         font-weight: medium;
         font-size: 1.5em;
-        color: $highContrast;
         padding: 10px 20px;
     }
     & .active,

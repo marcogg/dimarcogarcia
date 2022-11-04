@@ -3,6 +3,7 @@ const toggleContainer = document.querySelector('#toggleContainer')
 const toggle = document.querySelector('#toggle')
 const switchToggle = document.querySelector('.switch')
 const site = document.querySelector('html')
+const greyFonts = document.querySelectorAll('.darkText')
 
 const switchColors = (e) => {
     if (toggle.classList.contains('darkMode')) {
@@ -10,12 +11,22 @@ const switchColors = (e) => {
         toggle.classList.add('lightMode')
         site.classList.add('darkSite')
         switchToggle.classList.add('toDark')
+        for (text in greyFonts) {
+            greyFonts[text].classList.remove('darkText')
+            greyFonts[text].classList.add('lightText')
+
+        }
         return
     } else {
         toggle.classList.remove('lightMode')
         toggle.classList.add('darkMode')
         site.classList.remove('darkSite')
         switchToggle.classList.remove('toDark')
+        for (text in greyFonts) {
+            greyFonts[text].classList.remove('lightText')
+            greyFonts[text].classList.add('darkText')
+
+        }
         return
     }
 }
@@ -34,29 +45,29 @@ for (let cat = 0; cat < categories.length; cat++) {
         let current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace("active", "");
         this.className += "active";
+        return
     })
 }
 
 
+// PROJECTS BUILDER
+
+const categoryFilter = () => {
+
+}
+
+class ProjectCard {
+    constructor(categoryFilter) {
+        this.projectName = projectName
+        this.client = client
+    }
+
+
+}
 
 
 
-// for (let cat = 0; cat < categories.length; cat++) {
-//     if (e.target !== null) {
-//         e.currentTarget.classList.add('active')
-//     }
-
-// }
-
-
-// if (document.querySelector('#navList a.active') !== null) {
-//     document.querySelector('#navList a.active').classList.remove('active');
-// }
-// e.target.className = "active";
-
-
-
-
+document.addEventListener('DOMContentLoaded', new ProjectCard())
 
 // projects.forEach(projects => {
 //     const { projectName, client, year, caption, image, description, url, skills, } = projects;

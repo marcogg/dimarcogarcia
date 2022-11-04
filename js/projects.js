@@ -1,5 +1,5 @@
 const projects = {
-    'Web development': {
+    'WebDevelopment': {
         'Enel': {
             projectName: 'Enel Conecta - rewards',
             client: 'Enel',
@@ -102,17 +102,25 @@ const projects = {
         }
 
     },
-    'Ecommerce': {
+    'innovation': {
 
     },
-    'UX/UI': {
+    'uxui': {
 
     },
-    'Social Media': {
+    'advertising': {
 
     },
-    'Digital Marketing': {
+    '360': {
 
     }
 
 }
+
+// const filerCat = (projects) => {
+//     if (proje)
+// }
+
+const { WebDevelopment: { projectName, client, year, caption, image, description, url, skills } } = projects
+
+console.log()

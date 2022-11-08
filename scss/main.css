@@ -392,7 +392,7 @@ nav li .lightMode .switch {
 .card {
   width: 100%;
   border-radius: 30px;
-  max-width: 300px;
+  max-width: 290px;
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid #FFFFFF;
   box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
@@ -429,6 +429,12 @@ nav li .lightMode .switch {
 }
 .card p {
   color: #374249;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
 
 .categories {

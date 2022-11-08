@@ -1,17 +1,17 @@
 const projects = {
-    'WebDevelopment': {
-        'Enel': {
+    webDevelopment: {
+        enel: {
             projectName: 'Enel Conecta - rewards',
             client: 'Enel',
             year: 2020,
             caption: 'UX refinement and front end development',
-            image: '../img/projects/',
+            image: '../img/projects/enel_rewards.png',
             description: 'Enel is the largest electricity distributor in Colombia. Working remotely from Mexico, the team received a desktop design, we developed the responsive version of it and using good practices for SEO, the team built the user interface with HTML/CSS and Javascript for enhancing user interactions.',
             url: 'https://www.enelconecta.com.co/',
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work', 'Front End Dev']
 
         },
-        'Banorte': {
+        banorte: {
             projectName: 'Afore XXI rewards',
             client: 'Afore XXI Banorte',
             year: 2020,
@@ -22,7 +22,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Coca Cola': {
+        cocaCola: {
             projectName: 'Coca-Cola a la orden',
             client: 'Enel Codensa',
             year: 2020,
@@ -33,7 +33,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Holcim': {
+        holcim: {
             projectName: 'Holcim PrograMás',
             client: 'Holcim / Codensa',
             year: 2020,
@@ -44,7 +44,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Harley Davidson': {
+        harleyDavidson: {
             projectName: 'Harley Days 2015',
             client: 'Harley Davidson',
             year: 2015,
@@ -55,7 +55,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Zip': {
+        zip: {
             projectName: 'Landing Page and corporate site ',
             client: 'Zip.co',
             year: 2021,
@@ -66,7 +66,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Wacom': {
+        wacom: {
             projectName: 'Wacom Back to Shool Landing Page',
             client: 'Wacom',
             year: 2018,
@@ -77,7 +77,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        'Mazda': {
+        mazda: {
             projectName: 'Reto Mazda 2',
             client: 'Mazda',
             year: 2018,
@@ -89,8 +89,8 @@ const projects = {
 
         }
     },
-    'Wordpress': {
-        'AA Interiorismo': {
+    wordpress: {
+        aaInteriorismo: {
             projectName: 'Wacom Back to Shool Landing Page',
             client: 'Wacom',
             year: 2018,
@@ -102,25 +102,41 @@ const projects = {
         }
 
     },
-    'innovation': {
+    innovation: {
 
     },
-    'uxui': {
+    uxui: {
 
     },
-    'advertising': {
+    advertising: {
 
     },
-    '360': {
+    proj360: {
 
     }
 
 }
 
-// const filerCat = (projects) => {
-//     if (proje)
+// Bringing projects per category
+const destructuringProjects = (db) => {
+    for (proj in db) {
+        let categorySelected = db[proj]
+            // const { projectName, client, year, caption, image, description, url, skills } = db
+        return categorySelected
+    }
+}
+
+// Bringing projects items
+
+
+
+// const projectData = (projectList) =>{
+//     for (let {webDevelopment}){
+//         {projectName, client, year, caption, image, description, url, skills} = {projectName, client, year, caption, image, description, url, skills}
+//     }
 // }
 
-const { WebDevelopment: { projectName, client, year, caption, image, description, url, skills } } = projects
 
-console.log()
+// const { webDevelopment: { projectName, client, year, caption, image, description, url, skills } } = projects
+
+console.log(destructuringProjects(projects))

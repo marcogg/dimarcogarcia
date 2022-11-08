@@ -74,7 +74,6 @@ class ProjectCard {
 
     createCard(selectedCat) {
         for (Object.entries in selectedCat) {
-            //     const { projectName, client, year, caption, image, description, url, skills, } = projects;
             const cardProj = document.createElement('div')
             cardProj.classList.add('card')
             cardProj.innerHTML = `
@@ -99,37 +98,15 @@ class ProjectCard {
     }
 }
 
-// const cardPerProject = (db) =>{
-//     for (Object.key in db){
-//         let cardCreated = new ProjectCard (this.projectName, this.image, this.caption)
-//         return cardCreated
-//     }
-// }
-const webDev = new ProjectCard('Enel Conecta - rewards', './../img/projects/enel_rewards.png', 'UX refinement and front end development')
+const cardPerProject = (db) => {
+        for (projectData in db) {
+            let cardCreated = new ProjectCard(this.projectName, this.image, this.caption)
+            return cardCreated
+        }
+    }
+    // const webDev = new ProjectCard('Enel Conecta - rewards', './../img/projects/enel_rewards.png', 'UX refinement and front end development')
     // console.log(webDev.createCard())
 
-
-document.addEventListener('DOMContentLoaded', webDev.createCard(projects))
-
-// projects.forEach(projects => {
-//     const { projectName, client, year, caption, image, description, url, skills, } = projects;
-
-//     const cardTransformer = document.createElement('div');
-//     cardTransformer.classList.add('col', 'mb-3', 'd-flex');
-//     cardTransformer.innerHTML = `
-//         <div class="card bg-secondary flex-row rounded-3">
-//             <div class="w-50">
-//                 <img src="${image}" class="img-fluid object-fit" alt="">
-//             </div>
-//             <div class="card-body w-50">
-//                 <h5 class="card-title"></h5>
-//                 <h2 class="card-text mb-0 text-capitalize"><span>${nombre}</span>.</h2>
-//                 <p class="card-text mb-3 text-capitalize"><span>${modelo}</span>.</p>
-//                 <p class="card-text mb-3 text-capitalize"><b>Primera Aparición:</b> <span>${peliculaName}</span>.</p>
-//                 <p class="card-text mb-0"><b>Descripción:</b><br> <span>${descripcion}</span></p>
-//             </div>
-//         </div>
-//     `;
-
-//     boxTransformers.appendChild(cardTransformer);
-// });
+console.log(projects.webDevelopment.projectData)
+    // document.addEventListener('DOMContentLoaded', webDev.createCard(projects))
+document.addEventListener('DOMContentLoaded', cardPerProject(projects.webDevelopment.projectData).createCard(projects.webDevelopment.projectData))

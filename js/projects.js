@@ -1,6 +1,6 @@
 const projects = {
     webDevelopment: {
-        enel: {
+        projectData: {
             projectName: 'Enel Conecta - rewards',
             client: 'Enel',
             year: 2020,
@@ -11,7 +11,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work', 'Front End Dev']
 
         },
-        banorte: {
+        projectData: {
             projectName: 'Afore XXI rewards',
             client: 'Afore XXI Banorte',
             year: 2020,
@@ -22,29 +22,29 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        cocaCola: {
+        projectData: {
             projectName: 'Coca-Cola a la orden',
-            client: 'Enel Codensa',
+            client: 'Coca-Cola',
             year: 2020,
             caption: 'Front end development and marketing updates',
             image: '#',
-            description: ' ',
+            description: 'A la orden was a program developed to offer discount coupons of affiliated restaurants in Latin America, the main objective was to increase sales leveraging the ',
             url: 'https://alaorden.coca-cola.com.mx/',
-            skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
+            skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'SEO', 'Team Work']
 
         },
-        holcim: {
+        projectData: {
             projectName: 'Holcim PrograMás',
             client: 'Holcim / Codensa',
             year: 2020,
-            caption: 'UX refinement and front end development',
+            caption: 'UX refinement marketing updates and web Development',
             image: '#',
-            description: ' ',
-            url: '',
+            description: '',
+            url: 'https://www.puntosprogramas.com/',
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        harleyDavidson: {
+        projectData: {
             projectName: 'Harley Days 2015',
             client: 'Harley Davidson',
             year: 2015,
@@ -55,7 +55,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        zip: {
+        projectData: {
             projectName: 'Landing Page and corporate site ',
             client: 'Zip.co',
             year: 2021,
@@ -66,7 +66,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        wacom: {
+        projectData: {
             projectName: 'Wacom Back to Shool Landing Page',
             client: 'Wacom',
             year: 2018,
@@ -77,7 +77,7 @@ const projects = {
             skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
         },
-        mazda: {
+        projectData: {
             projectName: 'Reto Mazda 2',
             client: 'Mazda',
             year: 2018,
@@ -118,13 +118,13 @@ const projects = {
 }
 
 // Bringing projects per category
-const destructuringProjects = (db) => {
-    for (proj in db) {
-        let categorySelected = db[proj]
-            // const { projectName, client, year, caption, image, description, url, skills } = db
-        return categorySelected
-    }
-}
+// const destructuringProjects = (db) => {
+//     for (proj in db) {
+//         let categorySelected = db[proj]
+//             // const { projectName, client, year, caption, image, description, url, skills } = db
+//         return categorySelected
+//     }
+// }
 
 // Bringing projects items
 
@@ -139,4 +139,4 @@ const destructuringProjects = (db) => {
 
 // const { webDevelopment: { projectName, client, year, caption, image, description, url, skills } } = projects
 
-console.log(destructuringProjects(projects))
+// console.log(destructuringProjects(projects))

@@ -56,6 +56,9 @@ section {
     .row {
         flex-direction: row;
     }
+    section {
+        max-width: 90%;
+    }
 }
 
 

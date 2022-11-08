@@ -184,6 +184,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 10px 0;
     & h2 {
         font-size: 24px;
         text-align: center;
@@ -221,6 +222,25 @@ nav {
     // &.creativity {
     //     background-color: $secondary;
     // }
+}
+
+@media screen and (max-width:768px) {
+    .circle {
+        width: 120px;
+        height: 120px;
+        &.design {
+            font-size: 10px;
+        }
+        &.mkt {
+            font-size: 10px;
+        }
+        &.webDev {
+            font-size: 10px;
+        }
+        &.userEx {
+            font-size: 14px;
+        }
+    }
 }
 
 .logoLight {
@@ -285,6 +305,7 @@ nav {
     width: 100%;
     padding-inline-start: 0;
     margin: 2% 0 4% 0;
+    overflow-x: auto;
     & li {
         list-style-type: none;
         font-family: $mainFont;
@@ -301,5 +322,14 @@ nav {
         transition: 0.25s;
         border-radius: 30px;
         transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .categories {
+        & li {
+            font-size: 1em;
+        }
     }
 }

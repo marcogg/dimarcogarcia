@@ -159,8 +159,15 @@ header {
         text-align: end;
     }
     & p {
-        font-size: 24px;
         text-align: right;
+    }
+}
+
+@media screen and (max-width:300px) {
+    #aboutMe {
+        & h2 {
+            font-size: 34px;
+        }
     }
 }
 
@@ -176,9 +183,21 @@ header {
     }
 }
 
+@media screen and (max-width:300px) {
+    .title {
+        font-size: 34px;
+    }
+}
+
 .light {
-    // font-weight: 700;
+    font-weight: 400;
     font-size: 2em;
+}
+
+@media screen and (max-width:300px) {
+    .light {
+        font-size: 34px;
+    }
 }
 
 .blue {

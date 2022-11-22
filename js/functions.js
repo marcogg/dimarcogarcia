@@ -72,11 +72,10 @@ class ProjectCard {
         this.caption = caption
     }
 
-    createCard(selectedCat) {
-        for (Object.entries in selectedCat) {
-            const cardProj = document.createElement('div')
-            cardProj.classList.add('card')
-            cardProj.innerHTML = `
+    createCard() {
+        const cardProj = document.createElement('div')
+        cardProj.classList.add('card')
+        cardProj.innerHTML = `
                     <div class="imageContainer">
                         <div class="overlay"></div>
                         <img src=${this.image} class="w-100">
@@ -91,22 +90,32 @@ class ProjectCard {
                         </div>
                     </div>`
 
-            boxProjects.appendChild(cardProj)
+        boxProjects.appendChild(cardProj)
 
+    }
+    createCatCards = (proj) => {
+        for (data in proj) {
+            let cards = data.createCard(this.projectName, this.image, this.caption)
+            return cards
         }
-
     }
 }
 
-const cardPerProject = (db) => {
-        for (projectData in db) {
-            let cardCreated = new ProjectCard(this.projectName, this.image, this.caption)
-            return cardCreated
-        }
-    }
-    // const webDev = new ProjectCard('Enel Conecta - rewards', './../img/projects/enel_rewards.png', 'UX refinement and front end development')
-    // console.log(webDev.createCard())
 
-console.log(projects.webDevelopment.projectData)
-    // document.addEventListener('DOMContentLoaded', webDev.createCard(projects))
-document.addEventListener('DOMContentLoaded', cardPerProject(projects.webDevelopment.projectData).createCard(projects.webDevelopment.projectData))
+
+// const cardPerProject = (db) => {
+//         for (projectData in db) {
+//             let cardCreated = new ProjectCard(this.projectName, this.image, this.caption)
+//             return cardCreated
+//         }
+//     }
+// const webDev = new ProjectCard('Enel Conecta - rewards', './../img/projects/enel_rewards.png', 'UX refinement and front end development')
+
+// const webDev = (projects) => {
+//     Object.values(projects).map(entry => {
+//         return webDev = new ProjectCard(this.projectName, this.image, this.caption)
+//     })
+// }
+const webDev = new ProjectCard('Enel Conecta - rewards', './../img/projects/enel_rewards.png', 'UX refinement and front end development')
+
+document.addEventListener('DOMContentLoaded', projects.createCatCards(projects))

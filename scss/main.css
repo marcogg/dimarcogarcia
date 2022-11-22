@@ -146,7 +146,7 @@ header h4 {
   text-align: right;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 768px) {
   #aboutMe h2 {
     font-size: 34px;
   }
@@ -224,6 +224,14 @@ header {
   background-position: bottom;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    background-size: cover;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
 nav {
   margin-top: 2%;
   margin-bottom: 5%;
@@ -305,6 +313,11 @@ nav li .lightMode .switch {
   transition: 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  nav ul li {
+    font-size: 14px;
+  }
+}
 .containerHero {
   position: relative;
   width: 100%;
@@ -341,11 +354,21 @@ nav li .lightMode .switch {
 
 .arrow {
   width: 30vw;
+  min-width: 200px;
   position: absolute;
-  left: 50px;
+  left: 5%;
   top: 400px;
 }
 
+@media screen and (max-width: 768px) {
+  .arrow {
+    width: 30vw;
+    min-width: 200px;
+    position: absolute;
+    left: -10%;
+    top: calc(10% + 460px);
+  }
+}
 .divider {
   width: 100px;
   height: 5px;
@@ -416,7 +439,7 @@ nav li .lightMode .switch {
     font-size: 10px;
   }
   .circle.userEx {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 .logoLight {
@@ -471,6 +494,11 @@ nav li .lightMode .switch {
   grid-gap: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .categories {
   display: flex;
   flex-wrap: nowrap;
@@ -801,6 +829,10 @@ nav li .lightMode .switch {
 
 .justify-content-evenly {
   justify-content: space-evenly;
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
 }
 
 section {

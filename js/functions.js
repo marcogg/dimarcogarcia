@@ -4,6 +4,7 @@ const toggle = document.querySelector('#toggle')
 const switchToggle = document.querySelector('.switch')
 const site = document.querySelector('html')
 const greyFonts = document.querySelectorAll('.darkText')
+const logosCarousel = document.querySelectorAll('.logoLight')
 
 // PROJECTS CONSTANTS
 
@@ -15,22 +16,29 @@ const switchColors = (e) => {
         toggle.classList.add('lightMode')
         site.classList.add('darkSite')
         switchToggle.classList.add('toDark')
+        logosCarousel.classList.remove('logoLight')
+        logosCarousel.classList.add('logoDark')
         for (text in greyFonts) {
             greyFonts[text].classList.remove('darkText')
             greyFonts[text].classList.add('lightText')
 
         }
+
         return
     } else {
         toggle.classList.remove('lightMode')
         toggle.classList.add('darkMode')
         site.classList.remove('darkSite')
         switchToggle.classList.remove('toDark')
+        logosCarousel.classList.remove('logoDark')
+        logosCarousel.classList.add('logoLight')
         for (text in greyFonts) {
             greyFonts[text].classList.remove('lightText')
             greyFonts[text].classList.add('darkText')
 
         }
+
+
         return
     }
 }
@@ -72,7 +80,42 @@ class ProjectCard {
         this.link = link
     }
 
-    createCard() {
+    createCards() {
+        const cardProj = document.createElement('div')
+        cardProj.classList.add('card')
+        cardProj.innerHTML = `
+                    <div class="imageContainer">
+                        <div class="overlay"></div>
+                        <img src=${this.image} class="w-100">
+                    </div>
+                    <div class="meta">
+                        <div class="row w-100">
+                            <div class="col-12">
+                                <h5 class="mt-4">${this.projectName}</h5>
+                                <p class="mb-4">${this.caption}</p>
+                                <span class="mt-2">Read More</span>
+                            </div>
+                        </div>
+                    </div>`
 
+        boxProjects.appendChild(cardProj)
     }
 }
+
+const runProjects = (projectCat) => {
+    for (let i = 0; i < projectCat.length; i++) {
+        const projectProt = new ProjectCard(projectCat[i].image, projectCat[i].projectName, projectCat[i].caption, projectCat[i].link, )
+
+        // Creating cards for each project
+        projectProt.createCards()
+    }
+
+}
+
+const createEachCard = (protToHTML) => {
+    protToHTML.createCards()
+}
+
+
+// Running first category on load
+document.addEventListener("DOMContentLoaded", runProjects(webDevProjects))

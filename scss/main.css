@@ -219,7 +219,7 @@ body {
 header {
   background-image: url(../../img/bgHeader.svg);
   background-size: cover;
-  height: 90vh;
+  max-height: 750px;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -443,6 +443,10 @@ nav li .lightMode .switch {
   }
 }
 .logoLight {
+  filter: invert(100%) brightness(70%) contrast(120%) hue-rotate(200deg);
+}
+
+.logoDark {
   filter: invert(100%) brightness(110%) contrast(120%) hue-rotate(200deg);
 }
 

@@ -1,5 +1,5 @@
 const webDevProjects = [{
-        projectName: 'Enel Conecta - rewards',
+        projectName: 'Conecta - rewards',
         client: 'Enel',
         year: 2020,
         caption: 'UX refinement and front end development',
@@ -10,8 +10,8 @@ const webDevProjects = [{
 
     },
     {
-        projectName: 'Banorte - Afore XXI rewards',
-        client: 'Afore XXI Banorte',
+        projectName: 'Afore XXI rewards',
+        client: 'Banorte',
         year: 2020,
         caption: 'Front end development and marketing updates',
         image: '../img/projects/aforeXXI_banorte.jpg',
@@ -35,7 +35,7 @@ const webDevProjects = [{
         projectName: 'Holcim PrograMás',
         client: 'Holcim / Codensa',
         year: 2020,
-        caption: 'UX refinement marketing updates and web Development',
+        caption: 'UX refinement, marketing updates and development',
         image: '../img/projects/programas-holcim.jpg',
         description: '',
         url: 'https://www.puntosprogramas.com/',
@@ -54,7 +54,7 @@ const webDevProjects = [{
 
     },
     {
-        projectName: 'Landing Page and corporate site ',
+        projectName: 'Corporate site',
         client: 'Zip.co',
         year: 2021,
         caption: 'Wordpress template update - Front End Development',
@@ -68,7 +68,7 @@ const webDevProjects = [{
         projectName: 'Krystal rewards',
         client: 'Krystal hotels',
         year: 2018,
-        caption: 'Graphic assets and web site updates',
+        caption: 'Graphic assets, front end development and web site updates',
         image: '../img/projects/krystal-rewards.jpg',
         description: ' ',
         url: '',
@@ -76,7 +76,7 @@ const webDevProjects = [{
 
     },
     {
-        projectName: 'Wacom Back to Shool Landing Page',
+        projectName: 'Back to School funnel',
         client: 'Wacom',
         year: 2018,
         caption: 'UX refinement and front end development',

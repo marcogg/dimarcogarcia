@@ -33,7 +33,7 @@
   p {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
   }
 }
@@ -71,7 +71,7 @@
   p {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
   }
 }
@@ -109,7 +109,7 @@
   p {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
   }
 }
@@ -180,6 +180,15 @@ header h4 {
 }
 .blue {
   color: #3957ED;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -487,9 +496,17 @@ nav li .lightMode .switch {
 }
 .card h5 {
   color: #374249;
+  margin-bottom: 15px;
 }
 .card p {
   color: #374249;
+}
+.card .client-card-title {
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  color: #3957ED;
 }
 
 .projects {
@@ -504,7 +521,9 @@ nav li .lightMode .switch {
   }
 }
 .categories {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
@@ -519,8 +538,11 @@ nav li .lightMode .switch {
   list-style-type: none;
   font-family: "Montserrat", sans-serif;
   font-weight: medium;
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  align-items: center;
 }
 .categories .active,
 .categories :hover {
@@ -539,6 +561,16 @@ nav li .lightMode .switch {
     font-size: 1em;
   }
 }
+span.project-link {
+  font-size: 1em;
+  margin-bottom: 25px;
+  align-items: bottom;
+  align-items: flex-end;
+  margin-bottom: auto;
+  flex-grow: 1;
+  display: flex;
+}
+
 /* ----------------SPACING---------------- */
 /* PADDING X */
 .padX-1 {
@@ -805,6 +837,14 @@ nav li .lightMode .switch {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .container {

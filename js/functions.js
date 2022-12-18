@@ -73,8 +73,9 @@ const categoryFilter = () => {
     // Creating Protoype for card
 
 class ProjectCard {
-    constructor(image, projectName, caption, link) {
+    constructor(image, client, projectName, caption, link) {
         this.image = image
+        this.client = client
         this.projectName = projectName
         this.caption = caption
         this.link = link
@@ -90,10 +91,11 @@ class ProjectCard {
                     </div>
                     <div class="meta">
                         <div class="row w-100">
-                            <div class="col-12">
-                                <h5 class="mt-4">${this.projectName}</h5>
+                            <div class="col-12 d-flex flex-column">
+                                <h6 class="client-card-title">${this.client}</h6>
+                                <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
-                                <span class="mt-2">Read More</span>
+                                <a href="${this.url}"><span class="mt-2 project-link">Read More</span></a>
                             </div>
                         </div>
                     </div>`
@@ -104,7 +106,7 @@ class ProjectCard {
 
 const runProjects = (projectCat) => {
     for (let i = 0; i < projectCat.length; i++) {
-        const projectProt = new ProjectCard(projectCat[i].image, projectCat[i].projectName, projectCat[i].caption, projectCat[i].link, )
+        const projectProt = new ProjectCard(projectCat[i].image, projectCat[i].client, projectCat[i].projectName, projectCat[i].caption, projectCat[i].link)
 
         // Creating cards for each project
         projectProt.createCards()
@@ -119,3 +121,16 @@ const createEachCard = (protToHTML) => {
 
 // Running first category on load
 document.addEventListener("DOMContentLoaded", runProjects(webDevProjects))
+
+// Listening to category clicked
+const clickedCat = (e) => {
+    let id = e.target.id
+    console.log(e.target.id)
+    return id
+}
+
+// const bringProjects = (cardsToCreate, selectedCat) => {
+//     return cardsToCreate(selectedCat)
+// }
+document.querySelector("#categories").addEventListener("click", clickedCat)
+    // Bring projects from clicked category

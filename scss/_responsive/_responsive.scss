@@ -15,6 +15,14 @@
     flex-wrap: wrap;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 .container {
     display: flex;
     width: 100%;

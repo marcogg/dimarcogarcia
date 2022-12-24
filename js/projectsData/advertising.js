@@ -2,9 +2,9 @@ const advertising = [{
         projectName: 'Reto mazda 2',
         client: 'Mazda',
         year: 2014,
-        caption: '',
+        caption: 'Live and digital marketing project',
         image: '../img/projects/enel_rewards.png',
-        description: 'When Kudo design came up in Mazda vehicles, our agency was in charge of creating a marketing campaign among university students, one of the brands most important target for this model. We developed a series of digital and physical challenges, including a platform where they could post their achievements and share in social media. My job was to develop all the printed and digital graphic assets, creating the visual concept and develop the online platform for scores, while keeping an eye of marketing KPIs such as, bounce rate, page speed, social media reach, and more.',
+        description: 'TBD',
         url: 'https://twitter.com/hashtag/RetoMazda2?src=hashtag_click',
         skills: ['Graphic Design', 'Industrial design', 'UX', 'UI', 'HTML', 'CSS', 'JS', 'Responsive Design', 'Team Work', 'Front End Dev', 'SEO']
 

@@ -102,6 +102,11 @@ class ProjectCard {
 
         boxProjects.appendChild(cardProj)
     }
+
+    eraseCards() {
+        let selectCurrentCards = document.querySelector(".projects")
+        selectCurrentCards.parentNode.removeChild(selectCurrentCards)
+    }
 }
 
 const runProjects = (projectCat) => {
@@ -114,23 +119,89 @@ const runProjects = (projectCat) => {
 
 }
 
-const createEachCard = (protToHTML) => {
-    protToHTML.createCards()
-}
+// const createEachCard = (protToHTML) => {
+//     protToHTML.createCards()
+// }
 
 
 // Running first category on load
 document.addEventListener("DOMContentLoaded", runProjects(webDevProjects))
 
-// Listening to category clicked
-const clickedCat = (e) => {
-    let id = e.target.id
-    console.log(e.target.id)
-    return id
-}
+// Erasing current projects
 
-// const bringProjects = (cardsToCreate, selectedCat) => {
-//     return cardsToCreate(selectedCat)
+// document.querySelector("#advertising").addEventListener("click", () => {
+//     runProjects(advertising)
+// })
+
+
+
+
+// Listening to category clicked
+// const clickedCat = (e) => {
+//     let id = e.target.id
+//     console.log(e.target.id)
+//     return id
 // }
-document.querySelector("#categories").addEventListener("click", clickedCat)
-    // Bring projects from clicked category
+
+// Bringing array corresponding to target id
+// const searchProjectsArray = (selectedCat) => {
+
+// }
+
+// Changing category to webDev
+document.querySelector("#webDev").addEventListener("click", () => {
+
+    let projectBox = document.querySelector("#projects")
+    while (projectBox.hasChildNodes()) {
+        projectBox.removeChild(projectBox.firstChild)
+    }
+
+    return runProjects(webDevProjects)
+})
+
+// Changing category to advertising
+document.querySelector("#advertising").addEventListener("click", () => {
+
+    let projectBox = document.querySelector("#projects")
+    while (projectBox.hasChildNodes()) {
+        projectBox.removeChild(projectBox.firstChild)
+    }
+
+    return runProjects(advertising)
+})
+
+// Changing category to spatial
+document.querySelector("#spatial").addEventListener("click", () => {
+
+    let projectBox = document.querySelector("#projects")
+    while (projectBox.hasChildNodes()) {
+        projectBox.removeChild(projectBox.firstChild)
+    }
+
+    return runProjects(spatial)
+})
+
+// Changing category to visualDesign
+document.querySelector("#visualDesign").addEventListener("click", () => {
+
+    let projectBox = document.querySelector("#projects")
+    while (projectBox.hasChildNodes()) {
+        projectBox.removeChild(projectBox.firstChild)
+    }
+
+    return runProjects(visualDesign)
+})
+
+// Changing category to innovation
+document.querySelector("#innovation").addEventListener("click", () => {
+
+    let projectBox = document.querySelector("#projects")
+    while (projectBox.hasChildNodes()) {
+        projectBox.removeChild(projectBox.firstChild)
+    }
+
+    return runProjects(innovation)
+})
+
+
+// Bring projects from clicked category

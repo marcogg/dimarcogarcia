@@ -46,7 +46,7 @@ const advertising = [{
         projectName: 'Real State Marketing',
         client: 'Grupo Hodaya',
         year: 2021,
-        caption: 'Form brand identity, to VR experiences living in a webApp. 3 years creating marketing assets for real state',
+        caption: 'Form brand identity, to VR experiences; 3 years creating marketing assets for real state',
         image: '../img/projects/ghodaya.jpg',
         description: 'Taking advantage of my 3d design skills and my advertising background forma agencies, I spent more than 3 years in Grupo Hodaya, a real state company, where i developed from brand identity, logos, web design and digital sales funnels for each project. Starting from scratch, an architectural blueprint, we created the visual communication, and brought digital experiences to a traditional real state business.',
         url: '',

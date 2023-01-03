@@ -304,7 +304,7 @@ nav {
     & .imageContainer {
         position: relative;
         & img {
-            border-radius: 30px;
+            border-radius: 20px;
             width: 100%;
         }
         & .overlay {
@@ -314,9 +314,15 @@ nav {
             top: 0;
             bottom: 0;
             width: 100%;
-            border-radius: 30px;
+            border-radius: 20px;
             mix-blend-mode: overlay;
-            opacity: 0.5;
+            opacity: 0;
+        }
+    }
+    & .meta {
+        padding: 10%;
+        & .h-240 {
+            height: 240px;
         }
     }
     & span {
@@ -350,6 +356,7 @@ nav {
 @media screen and (max-width:768px) {
     .projects {
         grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
     }
 }
 

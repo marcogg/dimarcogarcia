@@ -90,12 +90,12 @@ class ProjectCard {
                         <img src=${this.image} class="w-100">
                     </div>
                     <div class="meta">
-                        <div class="row w-100">
-                            <div class="col-12 d-flex flex-column">
+                        <div class="row w-100 justify-content-between">
+                            <div class="col-12 d-flex flex-column h-240">
                                 <h6 class="client-card-title">${this.client}</h6>
                                 <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
-                                <a href="${this.url}"><span class="mt-2 project-link">Read More</span></a>
+                                <a class="mb-4" href="${this.url}"><span class="mt-2 project-link">Read More</span></a>
                             </div>
                         </div>
                     </div>`

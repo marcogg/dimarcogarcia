@@ -474,7 +474,7 @@ nav li .lightMode .switch {
   position: relative;
 }
 .card .imageContainer img {
-  border-radius: 30px;
+  border-radius: 20px;
   width: 100%;
 }
 .card .imageContainer .overlay {
@@ -484,9 +484,15 @@ nav li .lightMode .switch {
   top: 0;
   bottom: 0;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 20px;
   mix-blend-mode: overlay;
-  opacity: 0.5;
+  opacity: 0;
+}
+.card .meta {
+  padding: 10%;
+}
+.card .meta .h-240 {
+  height: 240px;
 }
 .card span {
   font-family: "Montserrat", sans-serif;
@@ -518,6 +524,7 @@ nav li .lightMode .switch {
 @media screen and (max-width: 768px) {
   .projects {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
   }
 }
 .categories {

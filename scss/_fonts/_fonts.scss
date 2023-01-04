@@ -144,6 +144,17 @@ header {
     }
 }
 
+h2 {
+    &.lightTitle {
+        margin-top: 5%;
+        color: none;
+        background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+    }
+}
+
 #aboutMe {
     & h2 {
         margin-top: 5%;

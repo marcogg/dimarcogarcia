@@ -41,6 +41,12 @@ body {
     background-position: top;
 }
 
+.arrowHeadUp {
+    position: absolute;
+    right: 30%;
+    width: 50vw;
+}
+
 header {
     background-image: url(../../img/bgHeader.svg);
     background-size: cover;
@@ -197,11 +203,11 @@ nav {
 
 @media screen and (max-width:768px) {
     .arrow {
-        width: 30vw;
+        width: 60vw;
         min-width: 200px;
         position: absolute;
         left: -10%;
-        top: calc(10% + 460px);
+        top: calc(10% + 590px);
     }
 }
 
@@ -232,30 +238,34 @@ nav {
     }
     &.design {
         background-color: $primary;
-        text-shadow: 5px 3px 0 $primary;
+        text-shadow: 3px 1px 0 $primary;
+        margin: auto;
         & h2 {
             font-size: 3em;
         }
     }
     &.mkt {
         background-color: $secondary;
+        margin: auto;
         & h2 {
             font-size: 2em;
-            text-shadow: 5px 3px 0 $secondary;
+            text-shadow: 3px 1px 0 $secondary;
         }
     }
     &.webDev {
         background-color: $highContrast;
+        margin: auto;
         & h2 {
             font-size: 2em;
-            text-shadow: 5px 3px 0 $highContrast;
+            text-shadow: 3px 1px 0 $highContrast;
         }
     }
     &.userEx {
         background-color: $lowContrast;
+        margin: auto;
         & h2 {
             font-size: 2em;
-            text-shadow: 5px 3px 0 $lowContrast;
+            text-shadow: 3px 1px 0 $lowContrast;
         }
     }
     // &.creativity {
@@ -294,7 +304,7 @@ nav {
     width: 100%;
     border-radius: 30px;
     max-width: 290px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.45);
     border: 2px solid #FFFFFF;
     box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
     // backdrop-filter: blur(29px);
@@ -411,4 +421,19 @@ span.project-link {
     margin-bottom: auto;
     flex-grow: 1;
     display: flex;
+}
+
+.pill {
+    padding: 6px 12px;
+    height: 45px;
+    border: solid white 3px;
+    border-radius: 30px;
+    color: $secondary;
+    box-shadow: 3px 3px 10px 1px #7EC9F5;
+    margin: 5px;
+    & .logoPill {
+        width: 24px;
+        // filter: saturate(0);
+        margin-right: 5px;
+    }
 }

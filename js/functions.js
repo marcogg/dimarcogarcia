@@ -16,11 +16,14 @@ const switchColors = (e) => {
         toggle.classList.add('lightMode')
         site.classList.add('darkSite')
         switchToggle.classList.add('toDark')
-        logosCarousel.classList.remove('logoLight')
-        logosCarousel.classList.add('logoDark')
-        for (text in greyFonts) {
-            greyFonts[text].classList.remove('darkText')
-            greyFonts[text].classList.add('lightText')
+            // logosCarousel.classList.add('logoDark')
+        for (let i = 0; i < greyFonts.length; i++) {
+            greyFonts[i].classList.remove('darkText')
+            greyFonts[i].classList.add('lightText')
+
+        }
+        for (let i = 0; i < logosCarousel.length; i++) {
+            logosCarousel[i].classList.toggle('logoDark')
 
         }
 
@@ -38,6 +41,16 @@ const switchColors = (e) => {
 
         }
 
+        for (let i = 0; i < logosCarousel.length; i++) {
+            logosCarousel[i].classList.toggle('logoLight')
+
+        }
+
+        for (let i = 0; i < greyFonts.length; i++) {
+            greyFonts[i].classList.remove('lightText')
+            greyFonts[i].classList.add('darkText')
+
+        }
 
         return
     }

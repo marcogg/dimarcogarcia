@@ -100,7 +100,7 @@ class ProjectCard {
         cardProj.innerHTML = `
                     <div class="imageContainer">
                         <div class="overlay"></div>
-                        <img src=${this.image} class="w-100">
+                        <img src=${this.image} class="w-100" loading="lazy">
                     </div>
                     <div class="meta">
                         <div class="row w-100 justify-content-between">
@@ -108,7 +108,7 @@ class ProjectCard {
                                 <h6 class="client-card-title">${this.client}</h6>
                                 <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
-                                <a class="mb-4" href="${this.url}"><span class="mt-2 project-link">Read More</span></a>
+                                <a class="mb-4" id="${this.link}"><span class="mt-2 project-link" onclick="">Read More</span></a>
                             </div>
                         </div>
                     </div>`
@@ -120,6 +120,24 @@ class ProjectCard {
         let selectCurrentCards = document.querySelector(".projects")
         selectCurrentCards.parentNode.removeChild(selectCurrentCards)
     }
+
+    metaCards() {
+        const metaCard = document.createElement('div')
+        metaCard.classList.add('modalContainer')
+        metaCard.innerHTML = `
+        <div class="modalBg">
+        <div class="cardMeta">
+            <h3 class="client">${this.client}</h3>
+            <h2 class="title">${this.title}</h2>
+            <p class="year">${this.year}</p>
+            <p class="description">${this.description}</p>
+            <ul class="pills" id="projSkills">
+
+            </ul>
+
+        </div>
+        `
+    }
 }
 
 const runProjects = (projectCat) => {
@@ -128,6 +146,7 @@ const runProjects = (projectCat) => {
 
         // Creating cards for each project
         projectProt.createCards()
+
     }
 
 }
@@ -217,4 +236,27 @@ document.querySelector("#innovation").addEventListener("click", () => {
 })
 
 
-// Bring projects from clicked category
+// Creating meta info modals---------------
+
+// Bringing id form selected project
+const getProjectId = (e) => {
+    let id = e.target.id
+    return id
+}
+
+// Searching project in corresponding Array
+const searchInProjectList = (arr, obtainedID) => {
+    arr.find(project => { project == obtainedID })
+}
+
+// Creating card matching the ID
+
+const createMetaCard = (fn, fn2) => {
+    while (fn == fn2) {
+        const createMeta = new ProjectCard
+    }
+
+}
+
+
+// document.querySelector("#readMore").addEventListener('click', searchInProjectList(webDevProjects, getProjectId))

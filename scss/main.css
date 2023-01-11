@@ -237,7 +237,8 @@ body {
 .arrowHeadUp {
   position: absolute;
   right: 30%;
-  width: 50vw;
+  width: 60vw;
+  z-index: 0;
 }
 
 header {
@@ -482,10 +483,11 @@ nav li .lightMode .switch {
   width: 100%;
   border-radius: 30px;
   max-width: 290px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.15);
   border: 2px solid #FFFFFF;
   box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
-  /* Note: backdrop-filter has minimal browser support */
+  -webkit-backdrop-filter: blur(20px) brightness(100%);
+          backdrop-filter: blur(20px) brightness(100%);
   border-radius: 30px;
   padding: 5%;
 }
@@ -520,18 +522,17 @@ nav li .lightMode .switch {
   font-size: 1.5rem;
 }
 .card h5 {
-  color: #374249;
+  color: #3957ED;
   margin-bottom: 15px;
 }
 .card p {
   color: #374249;
 }
 .card .client-card-title {
-  margin-top: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   font-size: 1.2rem;
-  color: #3957ED;
+  color: #374249;
 }
 
 .projects {
@@ -547,6 +548,8 @@ nav li .lightMode .switch {
   }
 }
 .categories {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -595,6 +598,11 @@ span.project-link {
   margin-bottom: auto;
   flex-grow: 1;
   display: flex;
+  cursor: pointer;
+}
+
+span.project-link:hover {
+  cursor: pointer;
 }
 
 .pill {
@@ -609,6 +617,50 @@ span.project-link {
 .pill .logoPill {
   width: 24px;
   margin-right: 5px;
+}
+
+.modalContainer {
+  position: absolute;
+  z-index: 5;
+}
+.modalContainer .modalBg {
+  background-color: rgba(2, 40, 61, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer .modalBg .cardMeta {
+  width: 100%;
+  border-radius: 30px;
+  max-width: 290px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
+  -webkit-backdrop-filter: blur(20px) brightness(100%);
+          backdrop-filter: blur(20px) brightness(100%);
+  border-radius: 30px;
+  padding: 2%;
+}
+.modalContainer .modalBg .cardMeta .client {
+  background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.modalContainer .modalBg .cardMeta .title {
+  color: #3957ED;
+  font-size: 1.5rem;
+}
+.modalContainer .modalBg .cardMeta .year {
+  color: #acddff;
+  margin-bottom: 20px;
+}
+.modalContainer .modalBg .cardMeta .description {
+  color: #374249;
 }
 
 /* ----------------SPACING---------------- */
@@ -927,7 +979,7 @@ section {
   display: flex;
   justify-content: center;
   max-width: 1024px;
-  margin: 8% auto;
+  margin: auto;
   align-items: center;
   flex-wrap: wrap;
 }

@@ -10,10 +10,10 @@ const spatial = [{
 
     },
     {
-        projectName: 'From blueprints to engaging 3D renders',
+        projectName: 'From blueprints to engaging renders',
         client: 'Grupo Hodaya - Terra Verde Juriquilla',
         year: 2017,
-        caption: '',
+        caption: "Experience your new home while it's still under construction",
         image: '../img/projects/juriquilla.jpg',
         description: 'Giving continuity to our workflow, I modeled and rendered this premium real state project that included plenty amenities in one of the most capital gain district in Querétaro, Mexico. Following with VR experience, web site, marketing funnel, social media graphic assets and brand identity.',
         url: 'https://www.facebook.com/Saba.mx/videos/972337419495987/',
@@ -21,10 +21,10 @@ const spatial = [{
 
     },
     {
-        projectName: 'VR experience in a web app',
+        projectName: 'VR in a web app',
         client: 'Grupo Proasa -  Durango 18',
         year: 2020,
-        caption: "With Javascript and 3D modeling it's possible to stare and experience what is still under construction",
+        caption: "Engage with your new home in a trendy neighborhood of Mexico City.",
         image: '../img/projects/d18.jpg',
         description: 'This luxury real state project needed to communicate the main idea for the investors, so, me and my team developed the brand identity, logo, and website funnel, as well as the digital marketing strategy, and social media ads, including KPIs follow up, and reports.',
         url: 'https://www.facebook.com/Saba.mx/videos/972337419495987/',
@@ -35,7 +35,7 @@ const spatial = [{
         projectName: 'AirBnb makeover',
         client: 'Personal project',
         year: 2022,
-        caption: '',
+        caption: 'AirBnb house makeover that offers an unique experience in Los Mochis, México.',
         image: '../img/projects/proyecto-m.jpg',
         description: "Taking advantage of my background as an industrial designer with experience and passion for spatial design and real state marketing, alongside with my wife, we invested in a house in her hometown, Los Mochis, Sinaloa. The project is progress and we are planning to include a tiny pool and a zen garden in the backyard, as well as some other amenities in the front garden.",
         url: 'https://www.facebook.com/Saba.mx/videos/972337419495987/',

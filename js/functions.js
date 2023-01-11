@@ -9,6 +9,8 @@ const logosCarousel = document.querySelectorAll('.logoLight')
 // PROJECTS CONSTANTS
 
 const boxProjects = document.querySelector('.projects');
+const modalProjects = document.querySelector('.projectsModal')
+const modalBg = document.querySelector('.modalBg')
 
 const switchColors = (e) => {
     if (toggle.classList.contains('darkMode')) {
@@ -59,7 +61,7 @@ const switchColors = (e) => {
 toggleContainer.addEventListener("click", switchColors)
 
 
-// Projects navigations
+// Projects navigation
 const navProjects = document.querySelector('.categories')
 const categories = navProjects.querySelectorAll('li')
 
@@ -83,7 +85,7 @@ const categoryFilter = () => {
             return console.log(categoryFilterRes)
         })
     }
-    // Creating Protoype for card
+    // Creating Prototype for card
 
 class ProjectCard {
     constructor(image, client, projectName, caption, link) {
@@ -108,37 +110,51 @@ class ProjectCard {
                                 <h6 class="client-card-title">${this.client}</h6>
                                 <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
-                                <a class="mb-4" id="${this.link}"><span class="mt-2 project-link" onclick="">Read More</span></a>
+                                <a class="mb-4"><span class="mt-2 project-link" id="${this.link}" onclick="createMetaCard(searchInProjectList(webDevProjects, getProjectId(event)))">Read More</span></a>
                             </div>
                         </div>
                     </div>`
 
         boxProjects.appendChild(cardProj)
     }
+}
 
-    eraseCards() {
-        let selectCurrentCards = document.querySelector(".projects")
-        selectCurrentCards.parentNode.removeChild(selectCurrentCards)
+// CLASS FOR META INFO CARDS
+class MetaCard {
+    constructor(projectName, client, year, caption, image, text, link, url, skills) {
+        this.projectName = projectName
+        this.client = client
+        this.year = year
+        this.caption = caption
+        this.image = image
+        this.text = text
+        this.link = link
+        this.url = url
+        this.skills = skills
     }
-
-    metaCards() {
+    createMeta() {
         const metaCard = document.createElement('div')
         metaCard.classList.add('modalContainer')
         metaCard.innerHTML = `
         <div class="modalBg">
         <div class="cardMeta">
+        <img class="w-100" src="${this.image}">
             <h3 class="client">${this.client}</h3>
-            <h2 class="title">${this.title}</h2>
+            <h2 class="title">${this.projectName}</h2>
             <p class="year">${this.year}</p>
-            <p class="description">${this.description}</p>
+            <p class="description"> ${this.text}</p>
             <ul class="pills" id="projSkills">
 
             </ul>
 
         </div>
+        </div>
         `
+        modalProjects.appendChild(metaCard)
     }
 }
+
+// Running projects to create menu cards
 
 const runProjects = (projectCat) => {
     for (let i = 0; i < projectCat.length; i++) {
@@ -174,6 +190,8 @@ document.addEventListener("DOMContentLoaded", runProjects(webDevProjects))
 //     console.log(e.target.id)
 //     return id
 // }
+// document.addEventListener('click', clickedCat)
+
 
 // Bringing array corresponding to target id
 // const searchProjectsArray = (selectedCat) => {
@@ -241,22 +259,30 @@ document.querySelector("#innovation").addEventListener("click", () => {
 // Bringing id form selected project
 const getProjectId = (e) => {
     let id = e.target.id
+        // console.log(id)
     return id
 }
 
 // Searching project in corresponding Array
 const searchInProjectList = (arr, obtainedID) => {
-    arr.find(project => { project == obtainedID })
+    let selectedProj = arr.find(project => project.link == `${obtainedID}`)
+        // console.log(selectedProj)
+    return selectedProj
 }
 
 // Creating card matching the ID
 
-const createMetaCard = (fn, fn2) => {
-    while (fn == fn2) {
-        const createMeta = new ProjectCard
-    }
+const createMetaCard = (fn2) => {
+    const createMetaCard = new MetaCard(fn2.image, fn2.client, fn2.projectName, fn2.year, fn2.text)
+
+    return createMetaCard.createMeta()
 
 }
 
+// Removing modal on click elsewhere
+const removeModal = () => {
+    let modal = document.querySelector('.projectsModal')
+    modal.removeChild(modal.firstChild)
+}
 
-// document.querySelector("#readMore").addEventListener('click', searchInProjectList(webDevProjects, getProjectId))
+modalProjects.addEventListener('click', removeModal())

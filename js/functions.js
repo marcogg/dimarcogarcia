@@ -88,12 +88,16 @@ const categoryFilter = () => {
     // Creating Prototype for card
 
 class ProjectCard {
-    constructor(image, client, projectName, caption, link) {
-        this.image = image
-        this.client = client
+    constructor(projectName, client, year, caption, image, text, link, url, skills) {
         this.projectName = projectName
+        this.client = client
+        this.year = year
         this.caption = caption
+        this.image = image
+        this.text = text
         this.link = link
+        this.url = url
+        this.skills = skills
     }
 
     createCards() {
@@ -117,48 +121,71 @@ class ProjectCard {
 
         boxProjects.appendChild(cardProj)
     }
-}
 
-// CLASS FOR META INFO CARDS
-class MetaCard {
-    constructor(projectName, client, year, caption, image, text, link, url, skills) {
-        this.projectName = projectName
-        this.client = client
-        this.year = year
-        this.caption = caption
-        this.image = image
-        this.text = text
-        this.link = link
-        this.url = url
-        this.skills = skills
-    }
     createMeta() {
         const metaCard = document.createElement('div')
         metaCard.classList.add('modalContainer')
         metaCard.innerHTML = `
-        <div class="modalBg">
-        <div class="cardMeta">
-        <img class="w-100" src="${this.image}">
-            <h3 class="client">${this.client}</h3>
-            <h2 class="title">${this.projectName}</h2>
-            <p class="year">${this.year}</p>
-            <p class="description"> ${this.text}</p>
-            <ul class="pills" id="projSkills">
+        <div class="modalBg" onclick ="closeModal()">
+            <div class="cardMeta">
+            <img src="./img/close.svg" class="closeModal" id="closeModal" onclick ="closeModal()">
+                <img class="w-100 roundCorners" src="${this.image}">
+                    <h3 class="client">${this.client}</h3>
+                    <h2 class="title">${this.projectName}</h2>
+                    <p class="year">${this.year}</p>
+                    <p class="description"> ${this.text}</p>
+                    <ul class="pills" id="projSkills">
 
-            </ul>
+                    </ul>
 
-        </div>
+            </div>
         </div>
         `
         modalProjects.appendChild(metaCard)
     }
+
 }
+
+// CLASS FOR META INFO CARDS
+// class MetaCard {
+//     constructor(projectName, client, year, caption, image, text, link, url, skills) {
+//         this.projectName = projectName
+//         this.client = client
+//         this.year = year
+//         this.caption = caption
+//         this.image = image
+//         this.text = text
+//         this.link = link
+//         this.url = url
+//         this.skills = skills
+//     }
+//     createMeta() {
+//         const metaCard = document.createElement('div')
+//         metaCard.classList.add('modalContainer')
+//         metaCard.innerHTML = `
+//         <div class="modalBg">
+//         <div class="cardMeta">
+//         <img class="w-100" src="${this.image}">
+//             <h3 class="client">${this.client}</h3>
+//             <h2 class="title">${this.projectName}</h2>
+//             <p class="year">${this.year}</p>
+//             <p class="description"> ${this.text}</p>
+//             <ul class="pills" id="projSkills">
+
+//             </ul>
+
+//         </div>
+//         </div>
+//         `
+//         modalProjects.appendChild(metaCard)
+//     }
+// }
 
 // Running projects to create menu cards
 
 const runProjects = (projectCat) => {
     for (let i = 0; i < projectCat.length; i++) {
-        const projectProt = new ProjectCard(projectCat[i].image, projectCat[i].client, projectCat[i].projectName, projectCat[i].caption, projectCat[i].link)
+        const projectProt = new ProjectCard(projectCat[i].projectName, projectCat[i].client, projectCat[i].year, projectCat[i].caption, projectCat[i].image, projectCat[i].text, projectCat[i].link, projectCat[i].url, projectCat[i].skills)
 
         // Creating cards for each project
         projectProt.createCards()
@@ -273,16 +300,22 @@ const searchInProjectList = (arr, obtainedID) => {
 // Creating card matching the ID
 
 const createMetaCard = (fn2) => {
-    const createMetaCard = new MetaCard(fn2.image, fn2.client, fn2.projectName, fn2.year, fn2.text)
+    const createMetaCard = new ProjectCard(fn2.projectName, fn2.client, fn2.year, fn2.caption, fn2.image, fn2.text, fn2.link, fn2.url, fn2.skills)
 
     return createMetaCard.createMeta()
 
 }
 
 // Removing modal on click elsewhere
-const removeModal = () => {
-    let modal = document.querySelector('.projectsModal')
-    modal.removeChild(modal.firstChild)
-}
+// function removeModal() {
+//     modalProjects.removeChild(modalProjects.firstChild)
+// }
 
-modalProjects.addEventListener('click', removeModal())
+// modalProjects.addEventListener('click', removeModal())
+
+// Removing modal when click close button
+function closeModal() {
+    // let btn = document.querySelector('#closeModal')
+    modalProjects.removeChild(modalProjects.firstChild)
+
+}

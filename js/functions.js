@@ -114,7 +114,7 @@ class ProjectCard {
                                 <h6 class="client-card-title">${this.client}</h6>
                                 <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
-                                <a class="mb-4"><span class="mt-2 project-link" id="${this.link}" onclick="createMetaCard(searchInProjectList(webDevProjects, getProjectId(event)))">Read More</span></a>
+                                <a class="mb-4"><span class="mt-2 project-link" id="${this.link}" onclick="createMetaCard(searchInProjectList(allProjects(), getProjectId(event)))">Read More</span></a>
                             </div>
                         </div>
                     </div>`
@@ -126,7 +126,7 @@ class ProjectCard {
         const metaCard = document.createElement('div')
         metaCard.classList.add('modalContainer')
         metaCard.innerHTML = `
-        <div class="modalBg" onclick ="closeModal()">
+        <div class="modalBg">
             <div class="cardMeta">
             <img src="./img/close.svg" class="closeModal" id="closeModal" onclick ="closeModal()">
                 <img class="w-100 roundCorners" src="${this.image}">
@@ -319,3 +319,11 @@ function closeModal() {
     modalProjects.removeChild(modalProjects.firstChild)
 
 }
+
+// All project arrays
+const allProjects = () => {
+    let all = webDevProjects.concat(spatial, advertising, visualDesign, innovation)
+    return all
+}
+
+// document.querySelector('#categories').addEventListener('click', arrayFromEventId(getProjectId))

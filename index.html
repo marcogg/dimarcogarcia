@@ -13,9 +13,34 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <!-- Google icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5TQL2C6');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TQL2C6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <section>
             <nav class="nav col-12">
@@ -67,7 +92,7 @@
                     </div>
                 </div>
                 <div class="row align-items-center mt-3">
-                    <div class="col-8 col-md-10 col-lg-10">
+                    <div class="col-8 col-md-10 col-lg-10" data-aos="flip-right">
                         <p class="darkText">Hello! I am Marco Garcia and I've been <b>creating digital and physical user centered experiences since 2012</b>, working together with local, national and global brands; helping them in the process of adding value to their customer's
                             lives, thorough marketing, advertising, web development, user experience and innovation.</p>
                     </div>
@@ -328,11 +353,14 @@
                     </div>
                 </div>
                 <div class="row w-100">
-                    <h2 class="lightTitle">Workflow and management</h2>
+                    <h2 class="lightTitle">Workflow and Management</h2>
                 </div>
                 <div class="row w-100">
                     <div class="pill">
                         <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Scrum</p>
+                    </div>
+                    <div class="pill">
+                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Agile</p>
                     </div>
                     <div class="pill">
                         <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Agile</p>
@@ -386,6 +414,12 @@
             }
         }).mount()
     </script>
+    <!-- Animate on scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 
 </html>

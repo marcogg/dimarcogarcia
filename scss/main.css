@@ -605,7 +605,7 @@ span.project-link:hover {
   cursor: pointer;
 }
 
-.pill {
+.pill, .modalContainer .modalBg .cardMeta .pill {
   padding: 6px 12px;
   height: 45px;
   border: solid white 3px;
@@ -613,8 +613,12 @@ span.project-link:hover {
   color: #3957ED;
   box-shadow: 3px 3px 10px 1px #7EC9F5;
   margin: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  font-weight: 300;
 }
-.pill .logoPill {
+.pill .logoPill, .modalContainer .modalBg .cardMeta .pill .logoPill {
   width: 24px;
   margin-right: 5px;
 }
@@ -639,18 +643,22 @@ span.project-link:hover {
   border-radius: 30px;
   max-width: 800px;
   margin: 30px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.75);
   border: 2px solid #FFFFFF;
   box-shadow: 0px 4px 17px 6px rgba(126, 201, 245, 0.4);
   -webkit-backdrop-filter: blur(20px) brightness(100%);
           backdrop-filter: blur(20px) brightness(100%);
   border-radius: 30px;
   padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .modalContainer .modalBg .cardMeta .client {
   background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 20px;
 }
 .modalContainer .modalBg .cardMeta .title {
   color: #3957ED;
@@ -663,11 +671,37 @@ span.project-link:hover {
 .modalContainer .modalBg .cardMeta .description {
   color: #374249;
 }
+.modalContainer .modalBg .cardMeta .metaLink {
+  background: linear-gradient(92.81deg, #7EC9F5 20%, #3957ED 80%);
+  padding: 10px 20px;
+  font-weight: 700;
+  color: white;
+  transition: 0.25s;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  width: 100%;
+}
+.modalContainer .modalBg .cardMeta .metaLink:hover {
+  background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+  cursor: pointer;
+}
+.modalContainer .modalBg .cardMeta .pill {
+  height: 30px;
+  padding: 0.25% 5%;
+  font-size: 16px;
+}
 .modalContainer .modalBg .cardMeta .closeModal {
+  flex-direction: row-reverse;
   position: relative;
   float: right;
-  margin: 10px 0 30px 0;
-  width: 40px;
+  margin: 0 0 20px 0;
+  width: 20px;
   transition-duration: 0.5s;
   transition: all 0.5s ease-in forwards;
 }

@@ -12,6 +12,7 @@ const boxProjects = document.querySelector('.projects');
 const modalProjects = document.querySelector('.projectsModal')
 const modalBg = document.querySelector('.modalBg')
 
+
 const switchColors = (e) => {
     if (toggle.classList.contains('darkMode')) {
         toggle.classList.remove('darkMode')
@@ -122,7 +123,7 @@ class ProjectCard {
         boxProjects.appendChild(cardProj)
     }
 
-    createMeta() {
+    createMeta(fnSkills, obtainedID) {
         const metaCard = document.createElement('div')
         metaCard.classList.add('modalContainer')
         metaCard.innerHTML = `
@@ -134,54 +135,22 @@ class ProjectCard {
                     <h2 class="title">${this.projectName}</h2>
                     <p class="year">${this.year}</p>
                     <p class="description"> ${this.text}</p>
-                    <ul class="pills" id="projSkills">
-
-                    </ul>
-
+                    <div class="row w-100 mt-3">
+                    <div class="col-9">
+                        <div class="row" id="projSkills"></div>
+                    </div>
+                    <div class="col-3">
+                        <a href="${this.url}"><span class="metaLink">See project</span></a>
+                    </div>
             </div>
         </div>
         `
         modalProjects.appendChild(metaCard)
+
+        fnSkills(obtainedID)
     }
 
 }
-
-// CLASS FOR META INFO CARDS
-// class MetaCard {
-//     constructor(projectName, client, year, caption, image, text, link, url, skills) {
-//         this.projectName = projectName
-//         this.client = client
-//         this.year = year
-//         this.caption = caption
-//         this.image = image
-//         this.text = text
-//         this.link = link
-//         this.url = url
-//         this.skills = skills
-//     }
-//     createMeta() {
-//         const metaCard = document.createElement('div')
-//         metaCard.classList.add('modalContainer')
-//         metaCard.innerHTML = `
-//         <div class="modalBg">
-//         <div class="cardMeta">
-//         <img class="w-100" src="${this.image}">
-//             <h3 class="client">${this.client}</h3>
-//             <h2 class="title">${this.projectName}</h2>
-//             <p class="year">${this.year}</p>
-//             <p class="description"> ${this.text}</p>
-//             <ul class="pills" id="projSkills">
-
-//             </ul>
-
-//         </div>
-//         </div>
-//         `
-//         modalProjects.appendChild(metaCard)
-//     }
-// }
-
-// Running projects to create menu cards
 
 const runProjects = (projectCat) => {
     for (let i = 0; i < projectCat.length; i++) {
@@ -297,14 +266,37 @@ const searchInProjectList = (arr, obtainedID) => {
     return selectedProj
 }
 
-// Creating card matching the ID
 
+// Iterating skills for creating pills
+function bringSkills(obtainedID) {
+    let findSkills = allProjects().find(project => project.link == `${obtainedID}`)
+        // console.log(findSkills.skills)
+    for (let i = 0; i < findSkills.skills.length; i++) {
+        // console.log(fn2[i].skills)
+        let eachSkill = document.createElement('div')
+        eachSkill.classList.add('pill')
+        eachSkill.innerHTML = `<span>${findSkills.skills[i]}</span>`
+
+        // console.log(eachSkill)
+        document.querySelector('#projSkills').appendChild(eachSkill)
+    }
+}
+
+
+// Creating card matching the ID
 const createMetaCard = (fn2) => {
+    // Creating class
     const createMetaCard = new ProjectCard(fn2.projectName, fn2.client, fn2.year, fn2.caption, fn2.image, fn2.text, fn2.link, fn2.url, fn2.skills)
 
-    return createMetaCard.createMeta()
+    // Calling meta prop
+    createMetaCard.createMeta(bringSkills, getProjectId(event))
+
 
 }
+
+
+
+
 
 // Removing modal on click elsewhere
 // function removeModal() {

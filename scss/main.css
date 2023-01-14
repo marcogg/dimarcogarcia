@@ -205,6 +205,28 @@ html {
   transition: 0.2s ease-in-out;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(210, 210, 210);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(92.81deg, #2b45c3 17.54%, #62a5cb 96.29%);
+}
+
 .darkSite {
   background-color: #252C4F;
   transition: 0.2s ease-in-out;
@@ -642,6 +664,8 @@ span.project-link:hover {
   width: 100%;
   border-radius: 30px;
   max-width: 800px;
+  max-height: 90%;
+  overflow-y: auto;
   margin: 30px;
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #FFFFFF;
@@ -653,6 +677,19 @@ span.project-link:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  /* Track */
+  /* Handle */
+}
+.modalContainer .modalBg .cardMeta ::-webkit-scrollbar {
+  width: 5px;
+}
+.modalContainer .modalBg .cardMeta ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(210, 210, 210);
+  border-radius: 10px;
+}
+.modalContainer .modalBg .cardMeta ::-webkit-scrollbar-thumb {
+  background: linear-gradient(92.81deg, #3957ED 17.54%, #7EC9F5 96.29%);
+  border-radius: 10px;
 }
 .modalContainer .modalBg .cardMeta .client {
   background: linear-gradient(270.2deg, #00a1ff 9.69%, #5f79fe 81.09%);

@@ -110,8 +110,8 @@ class ProjectCard {
                         <img src=${this.image} class="w-100" loading="lazy">
                     </div>
                     <div class="meta">
-                        <div class="row w-100 justify-content-between">
-                            <div class="col-12 d-flex flex-column h-240">
+                        <div class="w-100">
+                            <div class="col-12 d-flex flex-column justify-content-between">
                                 <h6 class="client-card-title">${this.client}</h6>
                                 <h5>${this.projectName}</h5>
                                 <p class="mb-4">${this.caption}</p>
@@ -135,11 +135,14 @@ class ProjectCard {
                     <h2 class="title">${this.projectName}</h2>
                     <p class="year">${this.year}</p>
                     <p class="description"> ${this.text}</p>
-                    <div class="row w-100 mt-3">
-                    <div class="col-9">
+                    <div class="row w-100 mt-5">
+                    <div class="col-12">
+                        <h3 class="title">Skills in this project</h3>
+                    </div>
+                    <div class="col-12 col-9 col-lg-9">
                         <div class="row" id="projSkills"></div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-12 col-3 col-lg-3">
                         <a href="${this.url}"><span class="metaLink">See project</span></a>
                     </div>
             </div>

@@ -13,7 +13,7 @@ sans-serif;
         font-weight: 800;
     }
     h2 {
-        font-size: 24px;
+        font-size: 22px;
         font-family: $mainFont;
         font-weight: 700;
     }
@@ -213,5 +213,13 @@ h2 {
 
 .blue {
     color: $secondary;
-    ;
+}
+
+.captionSlider {
+    color: $secondary;
+    font-size: 2rem;
+    font-family: $mainFont;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.2rem;
 }

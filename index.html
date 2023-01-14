@@ -68,17 +68,40 @@
                     <div class="col-12 col-md-6 col-lg-6">
                         <div class="containerHero">
                             <img src="./img/circle.png" class="heroBg animationRotate">
-                            <img src="./img/phone.png" class="phone" </div>
+                            <img src="./img/phone.png" class="phone">
+                            <!-- Begin: Carousel -->
+                            <div class="containerCarousel">
+                                <div class="glideHeader serviceCarousel">
+                                    <div class="glide__track" data-glide-el="track">
+                                        <ul class="glide__slides">
+                                            <li class="glide__slide">
+                                                <img src="./img/web-development.png" class="w-100">
+                                                <h2 class="captionSlider">Web development</h2>
+                                            </li>
+                                            <li class="glide__slide">
+                                                <img src="./img/marketing.png" class="w-100">
+                                                <h2 class="captionSlider">Advertising</h2>
+                                            </li>
+                                            <li class="glide__slide">
+                                                <img src="./img/socialMedia.png" class="w-100">
+                                                <h2 class="captionSlider">Inbound marketing</h2>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End: Carousel -->
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-lg-12">
-                            <img src="./img/arrow.svg" class="arrow">
-                        </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <img src="./img/arrow.svg" class="arrow">
                     </div>
                 </div>
+            </div>
         </section>
     </header>
     <main>
@@ -133,7 +156,7 @@
                 </div>
             </div>
         </section>
-        <section class="glass" class="mY-5">
+        <section class="glass" class="mY-5" data-aos="fade-down">
             <div class="container">
                 <div class="row w-100 mt-5">
                     <div class="col-6">
@@ -215,7 +238,7 @@
             </div>-->
         </section>
         <!-- PROJECTS -->
-        <section class="mY-5">
+        <section class="mY-5" data-aos="fade-up">
             <div class="container">
                 <div class="row w-100">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -276,112 +299,144 @@
         <section class="mY-5">
             <div class="container">
                 <div class="row w-100">
-                    <div class="col-12 col-md-6 col-lg-6 mYColombia
-                    -5">
-                        <h2 class="title text-left">Skills</h2>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <h2 class="lightTitle">Web development</h2>
-                </div>
-                <div class="row w-100">
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Frontend development</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/adobeCreativeSuite.svg" class="logoPill"></span>Adobe Suite</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/js.svg" class="logoPill"></span>JS</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/html.svg" class="logoPill"></span>HTML</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/sass.svg" class="logoPill"></span>Css / Sass</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/googleAnalytics.svg" class="logoPill"></span>Google analytics</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/react.svg" class="logoPill"></span>React</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/firebase.svg" class="logoPill"></span>Firebase</p>
-                    </div>
+                    <div class="col-12">
+                        <div class="row w-100">
+                            <div class="col-12 col-md-6 col-lg-6 mY-5">
+                                <h2 class="title text-left">Skills</h2>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right">
+                            <div class="row w-100">
+                                <h2 class="lightTitle">Web development</h2>
+                            </div>
+                            <div class="row w-100">
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Frontend development</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Node JS</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/adobeCreativeSuite.svg" class="logoPill"></span>Adobe Suite</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/js.svg" class="logoPill"></span>JS</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/html.svg" class="logoPill"></span>HTML</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/sass.svg" class="logoPill"></span>Css / Sass</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/googleAnalytics.svg" class="logoPill"></span>Google analytics</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/react.svg" class="logoPill"></span>React</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/firebase.svg" class="logoPill"></span>Firebase</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>SEO</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>eCommerce</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Wordpress</p>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>SEO</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>eCommerce</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Wordpress</p>
+                        <div data-aos="fade-left">
+                            <div class="row w-100">
+                                <h2 class="lightTitle">Interface design</h2>
+                            </div>
+                            <div class="row w-100">
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>UX/UI</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/figma.svg" class="logoPill"></span>Figma</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Design thinking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-right">
+                            <div class="row w-100">
+                                <h2 class="lightTitle">3D modeling</h2>
+                            </div>
+                            <div class="row w-100">
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/rhino.png" class="logoPill"></span>Rhinoceros</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/artlantis.png" class="logoPill"></span>Artlantis</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="./img/skills/vray.png" class="logoPill"></span>Vray</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Interior design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left">
+                            <div class="row w-100">
+                                <h2 class="lightTitle">Other resources</h2>
+                            </div>
+                            <div class="row w-100">
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Scrum</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Agile</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Adobe After Effects</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Photography</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Illustration</p>
+                                </div>
+                                <div class="pill">
+                                    <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Photography</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row w-100">
-                    <h2 class="lightTitle">Interface design</h2>
-                </div>
-                <div class="row w-100">
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>UX/UI</p>
+            </div>
+            </div>
+        </section>
+        <!-- Begin: contact section  -->
+        <footer class="contact mt-5" data-aos="fade-up">
+            <div class="container d-flex ">
+                <div class="row w-100 align-items-center">
+                    <div class="col-6">
+                        <h2 class="title text-right">Contact Me</h2>
                     </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/figma.svg" class="logoPill"></span>Figma</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Design thinking</p>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <h2 class="lightTitle">3D modeling</h2>
-                </div>
-                <div class="row w-100">
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/rhino.png" class="logoPill"></span>Rhinoceros</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/artlantis.png" class="logoPill"></span>Artlantis</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="./img/skills/vray.png" class="logoPill"></span>Vray</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Interior design</p>
-                    </div>
-                </div>
-                <div class="row w-100">
-                    <h2 class="lightTitle">Workflow and Management</h2>
-                </div>
-                <div class="row w-100">
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Scrum</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Agile</p>
-                    </div>
-                    <div class="pill">
-                        <p class="d-flex align-items-center"><span><img src="" class="logoPill"></span>Agile</p>
+                    <div class="col-6 form">
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                region: "na1",
+                                portalId: "21634170",
+                                formId: "9b106632-eff9-48d7-897d-3fff6c5f9169"
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="mY-5">
-            <div class="row">
-                <div class="col-12">
-                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                    <script>
-                        hbspt.forms.create({
-                            region: "na1",
-                            portalId: "21634170",
-                            formId: "9b106632-eff9-48d7-897d-3fff6c5f9169"
-                        });
-                    </script>
-                </div>
-            </div>
-        </section>
+
+        </footer>
+        <!-- End: contact cestion -->
     </main>
     <!-- Projects  -->
     <script src="./js/projects.js"></script>
@@ -397,6 +452,8 @@
         new Glide('.glide', {
             autoplay: 4000,
             perView: 2,
+            hoverpause:true,
+            bond:true,
             gap: 50,
             breakpoints: {
                 1024: {
@@ -405,6 +462,28 @@
                 },
                 768: {
                     perView: 2,
+                    gap: 20
+                },
+                380: {
+                    perView: 1,
+                    gap: 20
+                }
+            }
+        }).mount()
+    </script>
+    <script>
+        new Glide('.glideHeader', {
+            autoplay: 4000,
+            bond:true,
+            perView: 1,
+            gap: 50,
+            breakpoints: {
+                1024: {
+                    perView: 1,
+                    gap: 10
+                },
+                768: {
+                    perView: 1,
                     gap: 20
                 },
                 380: {

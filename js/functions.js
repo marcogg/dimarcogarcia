@@ -129,7 +129,7 @@ class ProjectCard {
         metaCard.innerHTML = `
         <div class="modalBg">
             <div class="cardMeta">
-            <img src="./img/close.svg" class="closeModal" id="closeModal" onclick ="closeModal()">
+            <img src="img/close.svg" class="closeModal" id="closeModal" onclick ="closeModal()">
                 <img class="w-100 roundCorners" src="${this.image}">
                     <h3 class="client">${this.client}</h3>
                     <h2 class="title">${this.projectName}</h2>
@@ -142,7 +142,7 @@ class ProjectCard {
                     <div class="col-12 col-9 col-lg-9">
                         <div class="row" id="projSkills"></div>
                     </div>
-                    <div class="col-12 col-3 col-lg-3">
+                    <div class="col-12 col-3 col-lg-3 mt-5">
                         <a href="${this.url}"><span class="metaLink">See project</span></a>
                     </div>
             </div>

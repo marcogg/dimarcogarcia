@@ -172,6 +172,16 @@ h2.lightTitle {
   background: linear-gradient(270.2deg, #7EC9F5 0%, #3957ED 125%);
 }
 
+.title-light {
+  background: linear-gradient(270.2deg, #d0eeff 0%, #c4ceff 125%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(156, 254, 255, 0.4588235294);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  text-shadow: 5px 4px 14px rgba(66, 127, 245, 0.4);
+}
+
 @media screen and (max-width: 300px) {
   .title {
     font-size: 34px;
@@ -193,7 +203,7 @@ h2.lightTitle {
 
 .captionSlider {
   color: #3957ED;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 200;
@@ -212,6 +222,7 @@ a {
 html {
   background-color: #daf9ff;
   transition: 0.2s ease-in-out;
+  overflow-x: hidden;
 }
 
 /* width */
@@ -382,12 +393,20 @@ nav li .lightMode .switch {
   width: 100%;
 }
 
-.containerCarousel {
-  position: relative;
-  top: -460px;
-  left: 30px;
+@media screen and (min-width: 300px) {
+  .containerCarousel {
+    position: relative;
+    top: -37vh;
+    left: 30px;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  .containerCarousel {
+    position: relative;
+    top: -460px;
+    left: 30px;
+  }
+}
 .serviceCarousel {
   position: absolute;
   top: 0;
@@ -526,6 +545,11 @@ nav li .lightMode .switch {
   filter: invert(100%) brightness(110%) contrast(120%) hue-rotate(200deg);
 }
 
+@media screen and (min-width: 769px) {
+  .card {
+    min-height: 500px;
+  }
+}
 .card {
   width: 100%;
   border-radius: 30px;
@@ -537,7 +561,6 @@ nav li .lightMode .switch {
           backdrop-filter: blur(20px) brightness(100%);
   border-radius: 30px;
   padding: 5%;
-  min-height: 500px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -586,6 +609,13 @@ nav li .lightMode .switch {
   color: #374249;
 }
 
+@media screen and (max-height: 768px) {
+  .card {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+  }
+}
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -808,7 +838,28 @@ span.project-link:hover {
 .contact label {
   color: #7EC9F5;
 }
+.contact .contact-circle {
+  position: relative;
+  bottom: -185px;
+}
 
+@media screen and (min-width: 300px) {
+  .contact {
+    background: radial-gradient(91.42% 742.03% at 16.63% 25.09%, #7EC9F5 50%, #0000FF 160%);
+    border-radius: 40px 40px 0px 0px;
+    width: 100vw;
+  }
+  .contact .form {
+    padding: 5% 10%;
+  }
+  .contact label {
+    color: #7EC9F5;
+  }
+  .contact .contact-circle {
+    position: relative;
+    bottom: -185px;
+  }
+}
 /* ----------------SPACING---------------- */
 /* PADDING X */
 .padX-1 {

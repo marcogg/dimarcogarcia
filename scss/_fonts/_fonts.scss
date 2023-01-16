@@ -194,6 +194,16 @@ h2 {
     }
 }
 
+.title-light {
+    background: linear-gradient(270.2deg, #d0eeff 0%, #c4ceff 125%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #9cfeff75;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    text-shadow: 5px 4px 14px rgb(66 127 245 / 40%);
+}
+
 @media screen and (max-width:300px) {
     .title {
         font-size: 34px;
@@ -217,7 +227,7 @@ h2 {
 
 .captionSlider {
     color: $secondary;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: $mainFont;
     text-align: center;
     font-weight: 200;

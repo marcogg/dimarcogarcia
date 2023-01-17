@@ -1,4 +1,14 @@
 const visualDesign = [{
+        projectName: 'Coke Studio - India retail campaign',
+        client: 'Coca-Cola',
+        year: 2022,
+        caption: 'Working remotely a retail marketing campaign for Coca-Cola India',
+        image: './img/projects/coke-studio.jpg',
+        text: 'Enel is the largest electricity distributor in Colombia. Working remotely from Mexico, the team received a desktop design, we developed the responsive version of it and using good practices for SEO, the team built the user interface with HTML/CSS and Javascript for enhancing user interactions.',
+        link: 'designCokeStudio',
+        url: 'https://www.enelconecta.com.co/',
+        skills: ['Adobe Creative Suite', 'Photoshop', 'Indesign', 'Illustrator', 'Rhino', 'Rendering', 'After Effects', 'Miro', 'Figma']
+    }, {
         projectName: 'Terra Verde Juriquilla branding',
         client: 'Grupo Hodaya',
         year: 2019,
@@ -64,16 +74,6 @@ const visualDesign = [{
         link: 'designEnTuHogar',
         url: 'https://www.enelconecta.com.co/',
         skills: ['Adobe Creative Suite', 'Photoshop', 'Indesign', 'Illustrator', 'Rhino', 'Rendering', 'After Effects', 'Miro', 'Figma']
-    },
-    {
-        projectName: 'Coke Studio - India retail campaign',
-        client: 'Coca-Cola',
-        year: 2022,
-        caption: 'Working remotely a retail marketing campaign for Coca-Cola India',
-        image: './img/projects/coke-studio.jpg',
-        text: 'Enel is the largest electricity distributor in Colombia. Working remotely from Mexico, the team received a desktop design, we developed the responsive version of it and using good practices for SEO, the team built the user interface with HTML/CSS and Javascript for enhancing user interactions.',
-        link: 'designCokeStudio',
-        url: 'https://www.enelconecta.com.co/',
-        skills: ['Adobe Creative Suite', 'Photoshop', 'Indesign', 'Illustrator', 'Rhino', 'Rendering', 'After Effects', 'Miro', 'Figma']
-    },
+    }
+
 ]

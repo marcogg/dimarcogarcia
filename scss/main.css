@@ -287,7 +287,7 @@ body {
 }
 
 header {
-  background-image: url(../../img/bgHeader.svg);
+  background-image: url(../img/bgHeader.svg);
   background-size: cover;
   max-height: 750px;
   background-repeat: no-repeat;
@@ -300,6 +300,30 @@ header {
     height: 90vh;
     background-repeat: no-repeat;
     background-position: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  nav .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 769px) {
+  nav {
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
   }
 }
 nav {
@@ -326,6 +350,9 @@ nav ul {
           padding-inline-start: 0;
 }
 nav li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   list-style-type: none;
   font-family: "Montserrat", sans-serif;
   -webkit-margin-start: 0;
@@ -363,6 +390,11 @@ nav li .darkMode .switch {
   align-items: center;
   transition: 0.2s ease-in-out;
 }
+nav li .darkMode a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 nav li .lightMode {
   display: flex;
   position: relative;
@@ -381,6 +413,20 @@ nav li .lightMode .switch {
   background-color: #3957ED;
   align-items: center;
   transition: 0.2s ease-in-out;
+}
+
+.mobileMenu {
+  background-image: url(./../../img/mobile-menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  z-index: 200;
 }
 
 @media screen and (max-width: 768px) {
@@ -688,7 +734,7 @@ span.project-link:hover {
 
 .pill, .modalContainer .modalBg .cardMeta .pill {
   padding: 6px 12px;
-  height: 45px;
+  height: 40px;
   border: solid white 3px;
   border-radius: 30px;
   color: #3957ED;
@@ -700,7 +746,7 @@ span.project-link:hover {
   font-weight: 300;
 }
 .pill .logoPill, .modalContainer .modalBg .cardMeta .pill .logoPill {
-  width: 24px;
+  width: 22px;
   margin-right: 5px;
 }
 
@@ -732,7 +778,7 @@ span.project-link:hover {
   -webkit-backdrop-filter: blur(20px) brightness(100%);
           backdrop-filter: blur(20px) brightness(100%);
   border-radius: 30px;
-  padding: 2%;
+  padding: 4%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

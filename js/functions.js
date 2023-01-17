@@ -4,7 +4,8 @@ const toggle = document.querySelector('#toggle')
 const switchToggle = document.querySelector('.switch')
 const site = document.querySelector('html')
 const greyFonts = document.querySelectorAll('.darkText')
-const logosCarousel = document.querySelectorAll('.logoLight')
+const logosCarousel = document.querySelectorAll('.logoClient')
+const logosCarouselDark = document.querySelectorAll('.logoDark')
 
 // PROJECTS CONSTANTS
 
@@ -36,16 +37,16 @@ const switchColors = (e) => {
         toggle.classList.add('darkMode')
         site.classList.remove('darkSite')
         switchToggle.classList.remove('toDark')
-        logosCarousel.classList.remove('logoDark')
-        logosCarousel.classList.add('logoLight')
-        for (text in greyFonts) {
+            // logosCarousel.classList.toggle('logoDark')
+            // logosCarousel.classList.add('logoLight')
+        for (let text = 0; text < greyFonts.length; text++) {
             greyFonts[text].classList.remove('lightText')
             greyFonts[text].classList.add('darkText')
 
         }
 
         for (let i = 0; i < logosCarousel.length; i++) {
-            logosCarousel[i].classList.toggle('logoLight')
+            logosCarousel[i].classList.toggle('logoDark')
 
         }
 

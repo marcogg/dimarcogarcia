@@ -243,14 +243,14 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
   scroll-padding-left: 100px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgb(210, 210, 210);
-  border-radius: 10px;
+  border-radius: 5px;
   scroll-padding-left: 100px;
 }
 
@@ -485,7 +485,7 @@ header {
     justify-content: flex-end;
     z-index: 200;
     position: relative;
-    left: 330px;
+    float: right;
   }
   .menu {
     display: none;
@@ -957,17 +957,16 @@ span.project-link:hover {
 }
 
 .footerContainer {
-  background-image: url("./../img/contact-circle.png");
-  background-size: contain;
+  background-image: url("./../img/contact-circle.svg");
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom left;
 }
 
 @media screen and (min-width: 300px) {
   .contact {
-    background: linear-gradient(149deg, #3957ED 17.54%, #7EC9F5 96.29%);
-    border-radius: 40px 40px 0px 0px;
-    width: 100vw;
+    border-radius: 50px 50px 0px 0px;
+    width: 100%;
   }
   .contact .form {
     padding: 5% 10%;
@@ -980,10 +979,10 @@ span.project-link:hover {
     bottom: -185px;
   }
 }
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 768px) {
   .contact {
-    border-radius: 140px 140px 0px 0px;
-    width: 100%;
+    background: radial-gradient(91.42% 742.03% at 16.63% 25.09%, #7EC9F5 50%, #0000FF 160%);
+    border-radius: 240px 240px 0px 0px;
   }
 }
 .btn {

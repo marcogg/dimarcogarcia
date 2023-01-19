@@ -43,21 +43,23 @@
     <!-- End Google Tag Manager (noscript) -->
     <header>
         <section>
-            <nav class="nav col-12">
-                <ul class="darkText">
-                    <div class="menu">
+            <nav class="nav w-100">
+                <span class="mobileMenu"></span>
+                <div class="menu">
+                    <ul class="darkText row col-lg-12">
+                        <li><img src="img/close.svg" class="closeMobileMenu" id="closeMobileMenu"></li>
                         <li class="active"><a href="#about">About me</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li href="#skills">Skills</li>
-                        <li href="#contact">Contact</li>
-                    </div>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li id="toggleContainer">
+                            <div class="darkMode" id="toggle">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                    </ul>
 
-                    <li id="toggleContainer">
-                        <div class="darkMode" id="toggle"><span class="switch"></span>
-                        </div>
-                    </li>
-                </ul>
-                <div><span class="mobileMenu"></span></div>
+                </div>
             </nav>
         </section>
 
@@ -108,7 +110,7 @@
         </section>
     </header>
     <main>
-        <section id="aboutMe" class="mY-5">
+        <section id="about" class="mY-5">
             <div class="container">
                 <div class="row justify-content-flex-end">
                     <div class="col-10 col-md-12 col-lg-12">
@@ -207,7 +209,7 @@
             </div>
         </section>
         <!-- PROJECTS -->
-        <section class="mY-5">
+        <section class="mY-5" id="projects">
             <div class="container">
                 <div class="row w-100">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -236,7 +238,7 @@
             </div>
             </div>
         </section>
-        <section class="mY-5">
+        <section class="mY-5" id="skills">
             <div class="container">
                 <div class="row w-100">
                     <div class="col-12">
@@ -356,15 +358,14 @@
             </div>
         </section>
         <!-- Begin: contact section  -->
-        <footer class="contact mt-5" data-aos="fade-up">
-            <div class="container d-flex ">
+        <footer class="contact mt-5" data-aos="fade-up" id="contact">
+            <div class="container d-flex footerContainer">
                 <div class="row w-100 align-items-center">
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <h2 class="title-light text-center">Contact Me</h2>
-                        <h3>Always willing to help</h3>
-                        <p><a href="https://wa.me/525530388534">Send a WhatsApp message</a></p>
-                        <p><a href="mailto:info@dimarcogarcia.com">info@dimarcogarcia.com</a></p>
-                        <img src="./img/contact-circle.png" class="w-100 contact-circle">
+                    <div class="col-12 col-md-6 col-lg-6 text-center padX-5">
+                        <h2 class="title-light mY-5">Contact Me</h2>
+                        <h3 class="title mb-5">Always willing to help</h3>
+                        <p class="mb-5"><a href="https://wa.me/525530388534" class="btn mb-5">Send a WhatsApp message</a></p>
+                        <p class="mb-5 text-dark">Or send me an email <a href="mailto:info@dimarcogarcia.com">info@dimarcogarcia.com</a></p>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 form">
                         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>

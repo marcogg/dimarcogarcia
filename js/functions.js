@@ -323,3 +323,21 @@ const allProjects = () => {
 }
 
 // document.querySelector('#categories').addEventListener('click', arrayFromEventId(getProjectId))
+
+
+// Mobile button hide / show
+document.querySelector('#closeMobileMenu').addEventListener('click', () => {
+    document.querySelector('.menu').style.display = 'none'
+})
+
+// Open Mobile menu
+document.querySelector('.mobileMenu').addEventListener('click', () => {
+    document.querySelector('.menu').style.display = 'flex'
+})
+
+// Close mobile menu on target link
+document.querySelector('nav .menu').addEventListener('click', () => {
+    if (window.screen.width <= 768) {
+        document.querySelector('.menu').style.display = 'none'
+    }
+})

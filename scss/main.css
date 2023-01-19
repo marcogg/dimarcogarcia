@@ -140,7 +140,7 @@ h2.lightTitle {
   font-weight: 400;
 }
 
-#about h2 {
+#aboutMe h2 {
   margin-top: 7%;
   text-align: right;
   color: none;
@@ -150,15 +150,15 @@ h2.lightTitle {
   font-weight: 400;
   font-size: 64px;
 }
-#about h5 {
+#aboutMe h5 {
   text-align: end;
 }
-#about p {
+#aboutMe p {
   text-align: right;
 }
 
 @media screen and (max-width: 768px) {
-  #about h2 {
+  #aboutMe h2 {
     font-size: 34px;
   }
 }
@@ -289,7 +289,7 @@ html {
 }
 
 body {
-  background-image: url(../../img/blurredBg.svg);
+  background-image: url(./../../img/blurredBg.svg);
   background-size: cover;
   background-repeat: repeat;
   background-position: top;
@@ -474,7 +474,7 @@ header {
 }
 @media screen and (max-width: 768px) {
   .mobileMenu {
-    background-image: url(./../../img/mobile-menu.svg);
+    background-image: url(../../../img/mobile-menu.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 60px;

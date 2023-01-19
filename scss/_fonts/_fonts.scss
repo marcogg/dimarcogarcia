@@ -157,7 +157,7 @@ h2 {
     }
 }
 
-#about {
+#aboutMe {
     & h2 {
         margin-top: 7%;
         text-align: right;
@@ -177,7 +177,7 @@ h2 {
 }
 
 @media screen and (max-width:768px) {
-    #about {
+    #aboutMe {
         & h2 {
             font-size: 34px;
         }

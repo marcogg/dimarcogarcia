@@ -63,7 +63,7 @@
                 }
                 
                 body {
-                    background-image: url(../../img/blurredBg.svg);
+                    background-image: url(./../../img/blurredBg.svg);
                     background-size: cover;
                     background-repeat: repeat;
                     background-position: top;
@@ -249,7 +249,7 @@
                 
                 @media screen and (max-width:768px) {
                     .mobileMenu {
-                        background-image: url(./../../img/mobile-menu.svg);
+                        background-image: url(../../../img/mobile-menu.svg);
                         background-repeat: no-repeat;
                         background-position: center;
                         width: 60px;

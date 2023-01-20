@@ -819,7 +819,7 @@ span.project-link:hover {
 
 .modalContainer {
   position: absolute;
-  z-index: 5;
+  z-index: 500;
 }
 .modalContainer .modalBg {
   background-color: rgba(2, 40, 61, 0.6);

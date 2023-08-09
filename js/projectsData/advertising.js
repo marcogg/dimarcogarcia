@@ -59,15 +59,15 @@ const advertising = [{
 
     },
     {
-        projectName: 'More than 100 local businesses',
+        projectName: 'More than 100 projects',
         client: 'Various',
         year: 2021,
-        caption: 'Logo Design, brand building, social media marketing and more!',
-        image: './img/projects/ghodaya.jpg',
-        text: 'Throughout 10 years I hacve helped more than 100 small stores, restaurants, and merchants to bring their business to web. Creating online stores, creative advertising, while keeping an eye in KPIs, in order to optimize their efforts.',
+        caption: 'BTL marketing, branding, logo design, social media marketing and some crazy things!',
+        image: './img/projects/marketing.jpg',
+        text: 'Throughout 10 years I have managed and directed creative projects for more than 100 brands, including global brands and local stores, restaurants, and merchants. Creating awareness through BTL marketing campaigns, online stores, creative printed, live and digital advertising, while keeping an eye in KPIs, in order to optimize their efforts.',
         link: 'advertisingVarious',
-        url: '',
-        skills: ['Graphic Design', 'Team Work', 'Creativity']
+        url: '#',
+        skills: ['Graphic Design', 'Team Work', 'Creativity', 'BTL', '3D modeling', '3D rendering', 'Web Development', 'Animation']
 
     },
 ]

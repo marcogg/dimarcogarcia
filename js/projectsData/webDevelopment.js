@@ -54,7 +54,7 @@ const webDevProjects = [{
         image: './img/projects/harley-days-harley-davidson.jpg',
         text: "Harley Days is an annual event, a ride where the Harley Davidson community could engage, and have fun, creating stronger bonds among them. The platform was a landing page where the participants could learn about the activities of the event and purchase their tickets.",
         link: 'webDevHarleyDays',
-        url: '',
+        url: '#',
         skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
     },
@@ -90,18 +90,29 @@ const webDevProjects = [{
         image: './img/projects/wacomLatam-offers.jpg',
         text: 'Designed and coded with the intention to aware about the special discounts of the wacom products among the students of LatAm. This site was available for Peru, Argentina, Colombia, Mexico and Brazil and achieved more than 10,000 visits within two months.',
         link: 'webDevWacom',
-        url: '#',
+        url: 'https://marcogg.github.io/wacom_lp/mexico.html',
         skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 
     },
     {
         projectName: 'Coca-Cola En tu Hogar',
         client: 'Coca Cola Mexico',
-        year: 2018,
+        year: 2022,
         caption: 'UX refinement and front end development',
         image: './img/projects/enTuHogar-CocaCola.jpg',
         text: 'En tu hogar / Na sua casa is the delivery platform for Coca-Cola in LatAm. Each country made its own version of the wab app, resulting in an inconsistent web design. Our work was to work with the current structure and styling CSS in order to achieve consistency of the look and feel in all the platforms; worried about the future maintenance, our team created guidelines and a UI library so the developers of other countries could save time while keeping design consistent. ',
         link: 'webDevEnTuHogar',
+        url: 'https://www.coca-colaentuhogar.com/',
+        skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
+
+    }, {
+        projectName: 'Digital Summit',
+        client: 'McKinsey & Company',
+        year: 2018,
+        caption: 'Branding, user journey and coding',
+        image: './img/projects/mckinseyAndCompany_DigitalSummit.jpg',
+        text: 'One of the largest consulting companies worldwide, came to us to create the branding, visual identity and landing page for the Digital Summit event of 2017. After testing and using recent web front libraries back then, we created an interactive web app where the attendants could register and book interesting meetings and talks about upcoming technological releases.',
+        link: 'webDigitalSummit',
         url: '#',
         skills: ['UX', 'UI', 'HTML', 'CSS', 'JS', 'GitHub', 'Responsive Design', 'Team Work']
 

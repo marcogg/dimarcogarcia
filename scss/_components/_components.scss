@@ -350,11 +350,11 @@
                 }
                 
                 .arrow {
-                    width: 30vw;
+                    width: 25vw;
                     min-width: 200px;
                     position: absolute;
                     left: 5%;
-                    top: 400px;
+                    top: 450px;
                 }
                 
                 @media screen and (max-width:768px) {
@@ -617,6 +617,7 @@
                     font-weight: lighter;
                     font-size: 20px;
                     font-weight: 300;
+                    white-space: nowrap;
                     & .logoPill {
                         width: 22px;
                         // filter: saturate(0);
@@ -805,4 +806,15 @@
                     border-radius: 30px;
                     transition: 0.3s ease-in-out;
                     cursor: pointer;
+                }
+                
+                .btnDisabled {
+                    background: linear-gradient(92.81deg, #afb4d1 17.54%, #dfdfdf 96.29%);
+                    padding: 10px 20px;
+                    font-weight: 700;
+                    color: $lowContrast;
+                    transition: 0.25s;
+                    border-radius: 30px;
+                    transition: 0.3s ease-in-out;
+                    cursor: not-allowed;
                 }
